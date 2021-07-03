@@ -1,3 +1,3 @@
 void main() {
-  print('test');
+  print('main file');
 }
