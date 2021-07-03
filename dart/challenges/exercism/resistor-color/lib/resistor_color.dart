@@ -1,5 +1,5 @@
 class ResistorColor {
-  List<String> colors = [
+  static const _colors = [
     'black',
     'brown',
     'red',
@@ -12,7 +12,9 @@ class ResistorColor {
     'white',
   ];
 
+  List<String> get colors => _colors;
+
   int colorCode(String color) {
-    return colors.indexOf(color);
+    return _colors.indexOf(color);
   }
 }
