@@ -1,26 +1,34 @@
 import 'dart:io';
 
 void main() {
-  // show prompt
-  stdout.write('rock, paper, or scissors? (r/p/s) ');
+  // while true
+  while (true) {
+    // show prompt
+    stdout.write('rock, paper, or scissors? (r/p/s) ');
 
-  // read user input from console
-  final input = stdin.readLineSync();
-  print(input);
+    // read user input from console
+    final input = stdin.readLineSync();
 
-  // if input is valid move("r", "p", "s")
+    // if input is valid move("r", "p", "s")
+    if (input == 'r' || input == 'p' || input == 's') {
+      print('Selected: $input');
 
-  // choose the ai move at random
+      // else if input is q
+    } else if (input == 'q') {
+      // quit the program
+      break;
 
-  // compare the player move with the ai move
+      // else
+      // invalid input
+    } else {
+      print('invalid input');
+    }
 
-  // show the result
+    // choose the ai move at random
 
-  // else if input is q
+    // compare the player move with the ai move
 
-  // quit the program
+    // show the result
 
-  // else
-
-  // invalid input
+  }
 }
