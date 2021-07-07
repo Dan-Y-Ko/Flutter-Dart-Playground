@@ -16,11 +16,11 @@ class ResistorColorDuo {
     List<String> output = [];
 
     for (var i = 0; i < input.length; i++) {
-      if (i < 2) {
-        output.add(_colors[input[i]].toString());
+      if (i > 1) {
+        break;
       }
 
-      continue;
+      output.add(_colors[input[i]].toString());
     }
 
     return int.parse(output.join());
