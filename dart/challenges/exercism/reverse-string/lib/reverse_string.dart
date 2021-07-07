@@ -1,7 +1,1 @@
-String reverse(String text) {
-  if (text != '') {
-    return text.split('').reversed.join();
-  }
-
-  return '';
-}
+String reverse(String text) => text.split('').reversed.join();
