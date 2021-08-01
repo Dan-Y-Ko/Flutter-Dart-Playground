@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/header.dart';
+import '../widgets/search.dart';
 
 class DiscoverScreen extends StatelessWidget {
   const DiscoverScreen({Key? key}) : super(key: key);
@@ -16,6 +17,10 @@ class DiscoverScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Header(),
+                  SizedBox(
+                    height: 30.0,
+                  ),
+                  Search(),
                 ],
               ),
             ),
