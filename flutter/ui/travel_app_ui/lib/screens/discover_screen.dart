@@ -11,10 +11,13 @@ class DiscoverScreen extends StatelessWidget {
       body: Container(
         child: SafeArea(
           child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Header(),
-              ],
+            child: Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Column(
+                children: [
+                  Header(),
+                ],
+              ),
             ),
           ),
         ),

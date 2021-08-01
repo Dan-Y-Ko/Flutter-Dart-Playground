@@ -5,8 +5,28 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('hello'),
+    return Row(
+      children: [
+        Container(
+          height: 100.0,
+          width: 100.0,
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Color(0xFFAAAAAA),
+            ),
+            borderRadius: BorderRadius.all(
+              Radius.circular(35.0),
+            ),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(4.0),
+            child: Image.asset(
+              'assets/images/male_avatar.png',
+              fit: BoxFit.fill,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
