@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'image_container.dart';
+
 class Avatar extends StatelessWidget {
   const Avatar({
     Key? key,
@@ -7,23 +9,19 @@ class Avatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return ImageContainer(
       height: 61.0,
       width: 61.0,
-      decoration: BoxDecoration(
-        border: Border.all(color: Color.fromRGBO(0, 0, 0, 0.05)
-            // color: Color(0xFFAAAAAA),
-            ),
-        borderRadius: BorderRadius.all(
-          Radius.circular(20.0),
-        ),
+      border: Border.all(
+        color: Color.fromRGBO(0, 0, 0, 0.05),
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(4.0),
-        child: Image.asset(
-          'assets/images/male_avatar.png',
-          fit: BoxFit.fill,
-        ),
+      borderRadius: BorderRadius.all(
+        Radius.circular(20.0),
+      ),
+      padding: const EdgeInsets.all(4.0),
+      asset: Image.asset(
+        'assets/images/male_avatar.png',
+        fit: BoxFit.fill,
       ),
     );
   }
