@@ -13,7 +13,7 @@ class DiscoverScreen extends StatelessWidget {
         child: SafeArea(
           child: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(30.0, 0, 30.0, 33.0),
+              padding: const EdgeInsets.fromLTRB(30.0, 30.0, 30.0, 33.0),
               child: Column(
                 children: [
                   Header(),
