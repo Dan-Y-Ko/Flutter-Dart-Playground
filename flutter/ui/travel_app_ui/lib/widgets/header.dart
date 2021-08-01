@@ -1,31 +1,27 @@
 import 'package:flutter/material.dart';
 
+import 'avatar.dart';
+import 'greeting.dart';
+import 'notification.dart' as TravelApp;
+
 class Header extends StatelessWidget {
   const Header({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Container(
-          height: 100.0,
-          width: 100.0,
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Color(0xFFAAAAAA),
+        Row(
+          children: [
+            Avatar(),
+            SizedBox(
+              width: 20.0,
             ),
-            borderRadius: BorderRadius.all(
-              Radius.circular(35.0),
-            ),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: Image.asset(
-              'assets/images/male_avatar.png',
-              fit: BoxFit.fill,
-            ),
-          ),
+            Greeting(),
+          ],
         ),
+        TravelApp.Notification(),
       ],
     );
   }
