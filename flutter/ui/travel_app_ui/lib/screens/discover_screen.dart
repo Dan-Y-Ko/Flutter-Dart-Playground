@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/category.dart';
 import '../widgets/header.dart';
 import '../widgets/search.dart';
 
@@ -21,6 +22,10 @@ class DiscoverScreen extends StatelessWidget {
                     height: 30.0,
                   ),
                   Search(),
+                  SizedBox(
+                    height: 30.0,
+                  ),
+                  Category(text: 'Popular Trips'),
                 ],
               ),
             ),
