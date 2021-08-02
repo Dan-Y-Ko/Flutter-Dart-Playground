@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app_ui/module/discover/widgets/trips_builder.dart';
 
 import '../widgets/category.dart';
 import '../widgets/header.dart';
@@ -26,6 +27,10 @@ class DiscoverScreen extends StatelessWidget {
                     height: 30.0,
                   ),
                   Category(text: 'Popular Trips'),
+                  SizedBox(
+                    height: 12.0,
+                  ),
+                  TripsBuilder(),
                 ],
               ),
             ),
