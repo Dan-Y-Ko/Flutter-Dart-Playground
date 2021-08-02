@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app_ui/core/widgets/image_container.dart';
 import 'package:travel_app_ui/module/discover/models/trips.dart';
+import 'package:travel_app_ui/module/discover/widgets/hearts.dart';
 
 class TripsBuilder extends StatelessWidget {
   const TripsBuilder({Key? key}) : super(key: key);
@@ -33,22 +35,48 @@ class TripsBuilder extends StatelessWidget {
             ),
             child: Column(
               children: [
-                Container(
-                  height: 187.0,
-                  width: 203.0,
-                  margin: EdgeInsets.only(top: 11.0),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(
-                        24.0,
+                trips[index].isFavorite
+                    ? Stack(
+                        children: [
+                          Container(
+                            height: 187.0,
+                            width: 203.0,
+                            margin: EdgeInsets.only(top: 11.0),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(
+                                  24.0,
+                                ),
+                              ),
+                              image: DecorationImage(
+                                image: AssetImage(trips[index].imageUrl),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            top: 20.0,
+                            right: 12.0,
+                            child: Hearts(),
+                          ),
+                        ],
+                      )
+                    : Container(
+                        height: 187.0,
+                        width: 203.0,
+                        margin: EdgeInsets.only(top: 11.0),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              24.0,
+                            ),
+                          ),
+                          image: DecorationImage(
+                            image: AssetImage(trips[index].imageUrl),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
                       ),
-                    ),
-                    image: DecorationImage(
-                      image: AssetImage(trips[index].imageUrl),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
                 SizedBox(
                   height: 16.0,
                 ),
