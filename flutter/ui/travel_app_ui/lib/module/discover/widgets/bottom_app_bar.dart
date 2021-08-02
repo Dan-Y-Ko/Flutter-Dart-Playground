@@ -34,10 +34,13 @@ class CustomBottomAppBar extends StatelessWidget {
           children: [
             Stack(
               children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: SvgPicture.asset(
-                    'assets/images/home.svg',
+                Material(
+                  type: MaterialType.transparency,
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: SvgPicture.asset(
+                      'assets/images/home.svg',
+                    ),
                   ),
                 ),
                 Positioned(
