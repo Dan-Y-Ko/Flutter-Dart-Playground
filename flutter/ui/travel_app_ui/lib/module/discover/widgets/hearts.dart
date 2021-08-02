@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app_ui/core/widgets/image_container.dart';
+import '../../../core/widgets/image_container.dart';
 
 class Hearts extends StatelessWidget {
   const Hearts({Key? key}) : super(key: key);

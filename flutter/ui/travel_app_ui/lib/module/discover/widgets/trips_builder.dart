@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app_ui/core/widgets/image_container.dart';
-import 'package:travel_app_ui/module/discover/models/trips.dart';
-import 'package:travel_app_ui/module/discover/widgets/hearts.dart';
+
+import '../models/trips.dart';
+import 'hearts.dart';
 
 class TripsBuilder extends StatelessWidget {
   const TripsBuilder({Key? key}) : super(key: key);
