@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import '../widgets/trips_builder.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../widgets/category.dart';
 import '../widgets/header.dart';
 import '../widgets/search.dart';
+import '../widgets/trips_builder.dart';
 
 class DiscoverScreen extends StatelessWidget {
   const DiscoverScreen({Key? key}) : super(key: key);
@@ -40,6 +41,36 @@ class DiscoverScreen extends StatelessWidget {
             ),
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Color(0xFF222222),
+        items: [
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              'assets/images/home.svg',
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              'assets/images/discover.svg',
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              'assets/images/heart.svg',
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              'assets/images/user.svg',
+            ),
+            label: '',
+          ),
+        ],
       ),
     );
   }
