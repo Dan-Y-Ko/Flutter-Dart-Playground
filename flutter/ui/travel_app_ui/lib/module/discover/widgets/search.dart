@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'image_container.dart';
-import 'input.dart';
+import '../../../core/widgets/image_container.dart';
+import '../../../core/widgets/input.dart';
 
 class Search extends StatelessWidget {
   const Search({Key? key}) : super(key: key);

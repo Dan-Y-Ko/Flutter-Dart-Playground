@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'image_container.dart';
+import '../../../core/widgets/image_container.dart';
 
 class Avatar extends StatelessWidget {
   const Avatar({
@@ -21,7 +21,7 @@ class Avatar extends StatelessWidget {
       padding: const EdgeInsets.all(4.0),
       asset: Image.asset(
         'assets/images/male_avatar.png',
-        fit: BoxFit.fill,
+        fit: BoxFit.cover,
       ),
     );
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/discover_screen.dart';
+import 'module/discover/screens/discover_screen.dart';
 
 void main() {
   runApp(MyApp());
