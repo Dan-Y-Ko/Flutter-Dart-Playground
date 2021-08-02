@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
+import '../widgets/bottom_app_bar.dart';
 import '../widgets/category.dart';
 import '../widgets/header.dart';
 import '../widgets/search.dart';
@@ -42,36 +42,49 @@ class DiscoverScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Color(0xFF222222),
-        items: [
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/images/home.svg',
-            ),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/images/discover.svg',
-            ),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/images/heart.svg',
-            ),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/images/user.svg',
-            ),
-            label: '',
-          ),
-        ],
-      ),
+      bottomNavigationBar: CustomBottomAppBar(),
     );
   }
 }
+
+// Padding(
+//         padding: const EdgeInsets.only(left: 30, bottom: 33.0, right: 30.0),
+//         child: ClipRRect(
+//           borderRadius: BorderRadius.all(
+//             Radius.circular(30.0),
+//           ),
+//           child: BottomAppBar(
+//             color: Color(0xFF222222),
+//             child: Row(
+//               mainAxisAlignment: MainAxisAlignment.spaceAround,
+//               crossAxisAlignment: CrossAxisAlignment.center,
+//               children: [
+//                 Container(
+//                   height: 60.0,
+//                   child: SvgPicture.asset(
+//                     'assets/images/home.svg',
+//                   ),
+//                 ),
+//                 Container(
+//                   height: 60.0,
+//                   child: SvgPicture.asset(
+//                     'assets/images/discover.svg',
+//                   ),
+//                 ),
+//                 Container(
+//                   height: 60.0,
+//                   child: SvgPicture.asset(
+//                     'assets/images/heart.svg',
+//                   ),
+//                 ),
+//                 Container(
+//                   height: 60.0,
+//                   child: SvgPicture.asset(
+//                     'assets/images/user.svg',
+//                   ),
+//                 ),
+//               ],
+//             ),
+//           ),
+//         ),
+//       ),
