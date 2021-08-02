@@ -32,7 +32,25 @@ class TripsBuilder extends StatelessWidget {
               ],
             ),
             child: Column(
-              children: [Text('asdasd')],
+              children: [
+                Container(
+                  height: 187.0,
+                  width: 203.0,
+                  margin: EdgeInsets.only(top: 11.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(
+                        24.0,
+                      ),
+                    ),
+                    image: DecorationImage(
+                      image: AssetImage(trips[index].imageUrl),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Text('asdasd'),
+              ],
             ),
           );
         },

@@ -16,7 +16,7 @@ const List<Trip> trips = [
   Trip(
     title: 'Greenland',
     caption: 'Greenland, North',
-    imageUrl: 'assets/images/greenland.svg',
+    imageUrl: 'assets/images/greenland.jpg',
     isFavorite: true,
   ),
   Trip(
