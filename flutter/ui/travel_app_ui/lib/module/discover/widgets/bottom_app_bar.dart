@@ -36,36 +36,57 @@ class CustomBottomAppBar extends StatelessWidget {
               children: [
                 Material(
                   type: MaterialType.transparency,
+                  shape: CircleBorder(),
+                  clipBehavior: Clip.hardEdge,
                   child: IconButton(
                     onPressed: () {},
+                    iconSize: 45.0,
                     icon: SvgPicture.asset(
                       'assets/images/home.svg',
                     ),
                   ),
                 ),
                 Positioned(
-                  left: 23.0,
-                  bottom: 0,
+                  left: 29.0,
+                  bottom: 3.0,
                   child: Image.asset('assets/images/Ellipse5.png'),
                 ),
               ],
             ),
-            IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset(
-                'assets/images/discover.svg',
+            Material(
+              type: MaterialType.transparency,
+              shape: CircleBorder(),
+              clipBehavior: Clip.hardEdge,
+              child: IconButton(
+                onPressed: () {},
+                iconSize: 45.0,
+                icon: SvgPicture.asset(
+                  'assets/images/discover.svg',
+                ),
               ),
             ),
-            IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset(
-                'assets/images/heart.svg',
+            Material(
+              type: MaterialType.transparency,
+              shape: CircleBorder(),
+              clipBehavior: Clip.hardEdge,
+              child: IconButton(
+                onPressed: () {},
+                iconSize: 45.0,
+                icon: SvgPicture.asset(
+                  'assets/images/heart.svg',
+                ),
               ),
             ),
-            IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset(
-                'assets/images/user.svg',
+            Material(
+              type: MaterialType.transparency,
+              shape: CircleBorder(),
+              clipBehavior: Clip.hardEdge,
+              child: IconButton(
+                onPressed: () {},
+                iconSize: 45.0,
+                icon: SvgPicture.asset(
+                  'assets/images/user.svg',
+                ),
               ),
             ),
           ],

@@ -43,64 +43,7 @@ class DiscoverScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.only(left: 30.0, right: 30.0),
-          child: ClipRRect(
-            borderRadius: BorderRadius.all(
-              Radius.circular(30.0),
-            ),
-            child: BottomAppBar(
-              color: Color(0xFF222222),
-              child: Container(
-                height: 88.0,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Stack(
-                        children: [
-                          IconButton(
-                            onPressed: () {},
-                            icon: SvgPicture.asset(
-                              'assets/images/home.svg',
-                            ),
-                          ),
-                          Positioned(
-                            left: 23.0,
-                            bottom: 0,
-                            child: Image.asset('assets/images/Ellipse5.png'),
-                          ),
-                        ],
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: SvgPicture.asset(
-                          'assets/images/discover.svg',
-                        ),
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: SvgPicture.asset(
-                          'assets/images/heart.svg',
-                        ),
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: SvgPicture.asset(
-                          'assets/images/user.svg',
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ),
-      ),
+      bottomNavigationBar: CustomBottomAppBar(),
     );
   }
 }
@@ -115,35 +58,48 @@ class DiscoverScreen extends StatelessWidget {
 //             child: BottomAppBar(
 //               color: Color(0xFF222222),
 //               child: Container(
-//                 height: 84.0,
-//                 child: Row(
-//                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-//                   children: [
-//                     IconButton(
-//                       onPressed: () {},
-//                       icon: SvgPicture.asset(
-//                         'assets/images/home.svg',
+//                 height: 88.0,
+//                 child: Padding(
+//                   padding: const EdgeInsets.symmetric(horizontal: 30.0),
+//                   child: Row(
+//                     mainAxisAlignment: MainAxisAlignment.spaceAround,
+//                     crossAxisAlignment: CrossAxisAlignment.center,
+//                     children: [
+//                       Stack(
+//                         children: [
+//                           IconButton(
+//                             onPressed: () {},
+//                             icon: SvgPicture.asset(
+//                               'assets/images/home.svg',
+//                             ),
+//                           ),
+//                           Positioned(
+//                             left: 23.0,
+//                             bottom: 0,
+//                             child: Image.asset('assets/images/Ellipse5.png'),
+//                           ),
+//                         ],
 //                       ),
-//                     ),
-//                     IconButton(
-//                       onPressed: () {},
-//                       icon: SvgPicture.asset(
-//                         'assets/images/discover.svg',
+//                       IconButton(
+//                         onPressed: () {},
+//                         icon: SvgPicture.asset(
+//                           'assets/images/discover.svg',
+//                         ),
 //                       ),
-//                     ),
-//                     IconButton(
-//                       onPressed: () {},
-//                       icon: SvgPicture.asset(
-//                         'assets/images/heart.svg',
+//                       IconButton(
+//                         onPressed: () {},
+//                         icon: SvgPicture.asset(
+//                           'assets/images/heart.svg',
+//                         ),
 //                       ),
-//                     ),
-//                     IconButton(
-//                       onPressed: () {},
-//                       icon: SvgPicture.asset(
-//                         'assets/images/user.svg',
+//                       IconButton(
+//                         onPressed: () {},
+//                         icon: SvgPicture.asset(
+//                           'assets/images/user.svg',
+//                         ),
 //                       ),
-//                     ),
-//                   ],
+//                     ],
+//                   ),
 //                 ),
 //               ),
 //             ),
