@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 //import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../core/widgets/bottom_app_bar.dart';
-import '../widgets/category.dart';
+import '../widgets/discover-screen/category.dart';
 import '../widgets/discover-screen/header/header.dart';
 import '../widgets/discover-screen/popular-categories/categories_builder.dart';
 import '../widgets/discover-screen/search-input/search.dart';

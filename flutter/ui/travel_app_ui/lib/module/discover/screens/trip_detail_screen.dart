@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/trip-detail/description.dart';
+import '../widgets/trip-detail/gallery/gallery_container.dart';
 import '../widgets/trip-detail/jumbotron/jumbotron.dart';
 import '../widgets/trip-detail/reservation_button.dart';
 
@@ -23,6 +24,10 @@ class TripDetail extends StatelessWidget {
                   height: 22.0,
                 ),
                 Description(),
+                SizedBox(
+                  height: 25.0,
+                ),
+                GalleryContainer(),
               ],
             ),
           ),
