@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/trip-detail/description.dart';
 import '../widgets/trip-detail/jumbotron/jumbotron.dart';
 import '../widgets/trip-detail/reservation_button.dart';
 
@@ -18,6 +19,10 @@ class TripDetail extends StatelessWidget {
             child: Column(
               children: [
                 Jumbotron(),
+                SizedBox(
+                  height: 22.0,
+                ),
+                Description(),
               ],
             ),
           ),
