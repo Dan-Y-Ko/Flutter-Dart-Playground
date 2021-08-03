@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/widgets/image_container.dart';
+import '../../../../core/widgets/image_container.dart';
 
 class Avatar extends StatelessWidget {
   const Avatar({

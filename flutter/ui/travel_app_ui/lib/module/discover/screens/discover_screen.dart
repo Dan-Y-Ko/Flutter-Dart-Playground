@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
-import '../widgets/bottom_app_bar.dart';
+//import 'package:flutter_svg/flutter_svg.dart';
+
+import '../../../core/widgets/bottom_app_bar.dart';
 import '../widgets/category.dart';
-import '../widgets/header.dart';
-import '../widgets/search.dart';
-import '../widgets/trips_builder.dart';
+import '../widgets/header/header.dart';
+import '../widgets/search-input/search.dart';
+import '../widgets/trips-card/trips_builder.dart';
 
 class DiscoverScreen extends StatelessWidget {
   const DiscoverScreen({Key? key}) : super(key: key);

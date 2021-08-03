@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../core/widgets/image_container.dart';
+import '../../../../core/widgets/image_container.dart';
 
 class Notification extends StatelessWidget {
   const Notification({Key? key}) : super(key: key);
