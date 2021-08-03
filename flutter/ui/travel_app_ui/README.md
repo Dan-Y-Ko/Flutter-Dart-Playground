@@ -1,16 +1,11 @@
 # travel_app_ui
 
-A new Flutter project.
+A ui focused project to get practice creating ui with Flutter.
 
-## Getting Started
+I followed a mock up implement this UI. Here is the link to the design:
 
-This project is a starting point for a Flutter application.
+https://www.uplabs.com/posts/travel-app-05f44f53-353d-490f-80af-6bef443cd669
 
-A few resources to get you started if this is your first Flutter project:
+Video Demo:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[![ui demo](https://cdn.loom.com/sessions/thumbnails/8dc7e92a5c694394bb264387f46b9eff-with-play.gif)](https://www.loom.com/share/8dc7e92a5c694394bb264387f46b9eff "ui demo")
