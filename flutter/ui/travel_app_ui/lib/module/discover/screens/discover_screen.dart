@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../../../core/widgets/bottom_app_bar.dart';
 import '../widgets/category.dart';
 import '../widgets/header/header.dart';
+import '../widgets/popular-categories/categories_builder.dart';
 import '../widgets/search-input/search.dart';
 import '../widgets/trips-card/trips_builder.dart';
 
@@ -38,6 +39,10 @@ class DiscoverScreen extends StatelessWidget {
                     height: 32.0,
                   ),
                   Category(text: 'Popular Categories'),
+                  SizedBox(
+                    height: 14.0,
+                  ),
+                  CategoriesBuilder(),
                 ],
               ),
             ),
