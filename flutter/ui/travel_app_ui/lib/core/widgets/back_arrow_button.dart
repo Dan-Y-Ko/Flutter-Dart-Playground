@@ -16,6 +16,9 @@ class BackArrow extends StatelessWidget {
       borderRadius: BorderRadius.all(
         Radius.circular(50.0),
       ),
+      onTap: () {
+        Navigator.of(context).pop();
+      },
       asset: SvgPicture.asset(
         'assets/images/arrow-left.svg',
       ),

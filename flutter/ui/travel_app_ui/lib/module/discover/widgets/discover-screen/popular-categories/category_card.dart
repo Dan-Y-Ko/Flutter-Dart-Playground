@@ -15,7 +15,7 @@ class CategoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 95.0,
-      width: 201.0,
+      width: 230.0,
       margin: EdgeInsets.only(right: 20.0),
       decoration: BoxDecoration(
         color: Color(0xFFFFFFFF),

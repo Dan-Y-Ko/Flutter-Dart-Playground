@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'image_container.dart';
 
 class Hearts extends StatelessWidget {
@@ -14,6 +15,7 @@ class Hearts extends StatelessWidget {
       borderRadius: BorderRadius.all(
         Radius.circular(50.0),
       ),
+      onTap: () {},
       asset: Icon(
         Icons.favorite,
         color: Color(0xFFF9685E),
