@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/widgets/horizontal_list_builder.dart';
-import '../../models/trips.dart';
+import '../../../../../core/widgets/horizontal_list_builder.dart';
+import '../../../models/trips.dart';
 import 'trip_card.dart';
 
 class TripsBuilder extends StatelessWidget {

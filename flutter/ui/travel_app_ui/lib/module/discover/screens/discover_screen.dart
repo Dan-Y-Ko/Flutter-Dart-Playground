@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 
 import '../../../core/widgets/bottom_app_bar.dart';
 import '../widgets/category.dart';
-import '../widgets/header/header.dart';
-import '../widgets/popular-categories/categories_builder.dart';
-import '../widgets/search-input/search.dart';
-import '../widgets/trips-card/trips_builder.dart';
+import '../widgets/discover-screen/header/header.dart';
+import '../widgets/discover-screen/popular-categories/categories_builder.dart';
+import '../widgets/discover-screen/search-input/search.dart';
+import '../widgets/discover-screen/trips-card/trips_builder.dart';
 
 class DiscoverScreen extends StatelessWidget {
   const DiscoverScreen({Key? key}) : super(key: key);

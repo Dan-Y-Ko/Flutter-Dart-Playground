@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../models/trips.dart';
-import '../../../../core/widgets/hearts.dart';
+import '../../../../../core/widgets/hearts.dart';
+import '../../../models/trips.dart';
 import 'trip_caption_text.dart';
 import 'trip_card_image.dart';
 

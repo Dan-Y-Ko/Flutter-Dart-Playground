@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../models/trips.dart';
+import '../../../models/trips.dart';
 
 class TripCaptionText extends StatelessWidget {
   const TripCaptionText({

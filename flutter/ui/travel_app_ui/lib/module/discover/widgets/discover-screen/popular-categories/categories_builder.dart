@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/widgets/horizontal_list_builder.dart';
-import '../../models/categories.dart';
+import '../../../../../core/widgets/horizontal_list_builder.dart';
+import '../../../models/categories.dart';
 import 'category_card.dart';
 
 class CategoriesBuilder extends StatelessWidget {

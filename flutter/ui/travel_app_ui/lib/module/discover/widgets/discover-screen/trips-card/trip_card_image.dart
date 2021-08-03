@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../models/trips.dart';
-import '../../screens/trip_detail_screen.dart';
+import '../../../models/trips.dart';
+import '../../../screens/trip_detail_screen.dart';
 
 class TripCardImage extends StatelessWidget {
   const TripCardImage({

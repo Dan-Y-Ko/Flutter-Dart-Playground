@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../models/categories.dart';
+import '../../../models/categories.dart';
 
 class CategoryCardImage extends StatelessWidget {
   const CategoryCardImage({
