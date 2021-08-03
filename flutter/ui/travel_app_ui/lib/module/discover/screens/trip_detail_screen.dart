@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/trip-detail/jumbotron/jumbotron.dart';
+
 class TripDetail extends StatelessWidget {
   const TripDetail({Key? key}) : super(key: key);
 
@@ -14,19 +16,7 @@ class TripDetail extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 24.0),
             child: Column(
               children: [
-                Container(
-                  height: 450.0,
-                  width: 366.0,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(36.0),
-                    ),
-                    image: DecorationImage(
-                      image: AssetImage('assets/images/greenland.jpg'),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                )
+                Jumbotron(),
               ],
             ),
           ),
