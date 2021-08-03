@@ -15,36 +15,34 @@ class DiscoverScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: SafeArea(
-          child: SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(30.0, 0, 30.0, 33.0),
-              child: Column(
-                children: [
-                  Header(),
-                  SizedBox(
-                    height: 30.0,
-                  ),
-                  Search(),
-                  SizedBox(
-                    height: 30.0,
-                  ),
-                  Category(text: 'Popular Trips'),
-                  SizedBox(
-                    height: 12.0,
-                  ),
-                  TripsBuilder(),
-                  SizedBox(
-                    height: 32.0,
-                  ),
-                  Category(text: 'Popular Categories'),
-                  SizedBox(
-                    height: 14.0,
-                  ),
-                  CategoriesBuilder(),
-                ],
-              ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(30.0, 0, 30.0, 33.0),
+            child: Column(
+              children: [
+                Header(),
+                SizedBox(
+                  height: 30.0,
+                ),
+                Search(),
+                SizedBox(
+                  height: 30.0,
+                ),
+                Category(text: 'Popular Trips'),
+                SizedBox(
+                  height: 12.0,
+                ),
+                TripsBuilder(),
+                SizedBox(
+                  height: 32.0,
+                ),
+                Category(text: 'Popular Categories'),
+                SizedBox(
+                  height: 14.0,
+                ),
+                CategoriesBuilder(),
+              ],
             ),
           ),
         ),
