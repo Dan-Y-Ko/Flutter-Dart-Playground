@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/trip-detail/jumbotron/jumbotron.dart';
+import '../widgets/trip-detail/reservation_button.dart';
 
 class TripDetail extends StatelessWidget {
   const TripDetail({Key? key}) : super(key: key);
@@ -22,6 +23,7 @@ class TripDetail extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: ReservationButton(),
     );
   }
 }
