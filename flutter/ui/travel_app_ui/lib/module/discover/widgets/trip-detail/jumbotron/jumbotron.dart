@@ -11,6 +11,7 @@ class Jumbotron extends StatelessWidget {
     return Stack(
       children: [
         Container(
+          margin: EdgeInsets.only(top: 5.0),
           height: 450.0,
           width: 366.0,
           decoration: BoxDecoration(
@@ -21,6 +22,25 @@ class Jumbotron extends StatelessWidget {
               image: AssetImage('assets/images/greenland.jpg'),
               fit: BoxFit.cover,
             ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.white,
+                offset: Offset(0, 0),
+              ),
+              BoxShadow(
+                color: Colors.white,
+                offset: Offset(0, 0),
+              ),
+              BoxShadow(
+                color: Color.fromRGBO(0, 0, 0, 0.1),
+                offset: Offset(0, 17.0),
+                blurRadius: 94.0,
+              ),
+              BoxShadow(
+                color: Colors.white,
+                offset: Offset(0, 0),
+              ),
+            ],
           ),
         ),
         Positioned(

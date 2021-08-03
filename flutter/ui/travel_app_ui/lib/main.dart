@@ -23,3 +23,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+// design credit to: Salung Prastyo
+// https://www.uplabs.com/posts/travel-app-05f44f53-353d-490f-80af-6bef443cd669
