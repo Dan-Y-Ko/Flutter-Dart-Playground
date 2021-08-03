@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../models/trips.dart';
+import '../../screens/trip_detail_screen.dart';
 
 class TripCardImage extends StatelessWidget {
   const TripCardImage({
@@ -41,7 +42,9 @@ class TripCardImage extends StatelessWidget {
             clipBehavior: Clip.hardEdge,
             color: Colors.transparent,
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamed(TripDetail.routeName);
+              },
             ),
           ),
         ),
