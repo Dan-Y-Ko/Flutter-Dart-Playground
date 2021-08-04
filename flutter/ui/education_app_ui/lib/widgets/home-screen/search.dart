@@ -14,39 +14,7 @@ class Search extends StatelessWidget {
         SizedBox(
           width: 17.0,
         ),
-        Stack(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 36.0),
-              child: Container(
-                height: 50.0,
-                width: 68.0,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15.0),
-                  image: DecorationImage(
-                    image: AssetImage('assets/images/Settings.jpg'),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            ),
-            Positioned.fill(
-              top: 36.0,
-              child: Material(
-                borderRadius: BorderRadius.all(
-                  Radius.circular(
-                    15.0,
-                  ),
-                ),
-                clipBehavior: Clip.hardEdge,
-                color: Colors.transparent,
-                child: InkWell(
-                  onTap: () {},
-                ),
-              ),
-            ),
-          ],
-        ),
+        SettingsButton(),
       ],
     );
   }
@@ -82,6 +50,49 @@ class Input extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class SettingsButton extends StatelessWidget {
+  const SettingsButton({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(top: 36.0),
+          child: Container(
+            height: 50.0,
+            width: 68.0,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15.0),
+              image: DecorationImage(
+                image: AssetImage('assets/images/Settings.jpg'),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+        ),
+        Positioned.fill(
+          top: 36.0,
+          child: Material(
+            borderRadius: BorderRadius.all(
+              Radius.circular(
+                15.0,
+              ),
+            ),
+            clipBehavior: Clip.hardEdge,
+            color: Colors.transparent,
+            child: InkWell(
+              onTap: () {},
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
