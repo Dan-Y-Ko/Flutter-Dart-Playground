@@ -1,6 +1,7 @@
-import 'package:education_app_ui/models/course.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
+import '../../models/course.dart';
 
 class CourseGridView extends StatelessWidget {
   const CourseGridView({Key? key}) : super(key: key);
