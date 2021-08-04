@@ -17,7 +17,13 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               children: [
                 Header(),
+                SizedBox(
+                  height: 36.0,
+                ),
                 Search(),
+                SizedBox(
+                  height: 26.0,
+                ),
               ],
             ),
           ),

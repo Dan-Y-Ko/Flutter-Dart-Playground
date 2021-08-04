@@ -26,7 +26,6 @@ class Input extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 36.0),
       child: TextField(
         style: TextStyle(
           color: Colors.black,
@@ -63,22 +62,18 @@ class SettingsButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Padding(
-          padding: const EdgeInsets.only(top: 36.0),
-          child: Container(
-            height: 50.0,
-            width: 68.0,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15.0),
-              image: DecorationImage(
-                image: AssetImage('assets/images/Settings.jpg'),
-                fit: BoxFit.cover,
-              ),
+        Container(
+          height: 50.0,
+          width: 68.0,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15.0),
+            image: DecorationImage(
+              image: AssetImage('assets/images/Settings.jpg'),
+              fit: BoxFit.cover,
             ),
           ),
         ),
         Positioned.fill(
-          top: 36.0,
           child: Material(
             borderRadius: BorderRadius.all(
               Radius.circular(
