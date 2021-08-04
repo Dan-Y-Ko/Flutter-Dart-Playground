@@ -1,3 +1,4 @@
+import 'package:education_app_ui/widgets/home-screen/course-list.dart';
 import 'package:education_app_ui/widgets/home-screen/header.dart';
 import 'package:education_app_ui/widgets/home-screen/search.dart';
 import 'package:flutter/material.dart';
@@ -24,6 +25,7 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   height: 26.0,
                 ),
+                CourseList(),
               ],
             ),
           ),
