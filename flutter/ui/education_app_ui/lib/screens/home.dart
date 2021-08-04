@@ -1,7 +1,8 @@
-import 'package:education_app_ui/widgets/home-screen/header.dart';
-import 'package:education_app_ui/widgets/home-screen/search.dart';
-import 'package:education_app_ui/widgets/home-screen/subject-list.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/home-screen/header.dart';
+import '../widgets/home-screen/search.dart';
+import '../widgets/home-screen/subject-list.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);

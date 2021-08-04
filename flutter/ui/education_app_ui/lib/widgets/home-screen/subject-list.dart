@@ -1,5 +1,6 @@
-import 'package:education_app_ui/models/subject.dart';
 import 'package:flutter/material.dart';
+
+import '../../models/subject.dart';
 
 class SubjectList extends StatelessWidget {
   const SubjectList({Key? key}) : super(key: key);
