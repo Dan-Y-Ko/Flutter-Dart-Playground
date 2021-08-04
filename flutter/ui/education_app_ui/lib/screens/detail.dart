@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/detail-screen/header.dart';
+import '../widgets/detail-screen/info.dart';
 
 class Detail extends StatelessWidget {
   const Detail({Key? key}) : super(key: key);
@@ -16,6 +17,10 @@ class Detail extends StatelessWidget {
           child: Column(
             children: [
               Header(),
+              SizedBox(
+                height: 26.0,
+              ),
+              Info(),
             ],
           ),
         ),
