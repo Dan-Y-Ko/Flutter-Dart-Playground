@@ -27,6 +27,7 @@ class Content extends StatelessWidget {
               height: 165.0,
               title: 'Get Started',
               icon: SvgPicture.asset('assets/images/chevron-up.svg'),
+              isOpen: true,
             ),
             SizedBox(
               height: 14.0,
@@ -35,6 +36,7 @@ class Content extends StatelessWidget {
               height: 59.0,
               title: 'The Brief',
               icon: SvgPicture.asset('assets/images/chevron-down.svg'),
+              isOpen: false,
             ),
             SizedBox(
               height: 14.0,
@@ -43,6 +45,7 @@ class Content extends StatelessWidget {
               height: 59.0,
               title: 'Rolls of Grammar',
               icon: SvgPicture.asset('assets/images/chevron-down.svg'),
+              isOpen: false,
             ),
           ],
         ),
@@ -76,11 +79,13 @@ class CardContainer extends StatelessWidget {
     required this.height,
     required this.title,
     required this.icon,
+    required this.isOpen,
   }) : super(key: key);
 
   final double height;
   final String title;
   final Widget icon;
+  final bool isOpen;
 
   @override
   Widget build(BuildContext context) {
@@ -113,6 +118,22 @@ class CardContainer extends StatelessWidget {
               icon,
             ],
           ),
+          if (isOpen == true)
+            Container(
+              height: 106.0,
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Playlist(title: 'Introduction', duration: '02:04'),
+                    Divider(),
+                    Playlist(
+                      title: 'How to improve grammar',
+                      duration: '05:03',
+                    ),
+                  ],
+                ),
+              ),
+            ),
         ],
       ),
     );
@@ -122,7 +143,12 @@ class CardContainer extends StatelessWidget {
 class Playlist extends StatelessWidget {
   const Playlist({
     Key? key,
+    required this.title,
+    required this.duration,
   }) : super(key: key);
+
+  final String title;
+  final String duration;
 
   @override
   Widget build(BuildContext context) {
@@ -133,7 +159,7 @@ class Playlist extends StatelessWidget {
             contentPadding: EdgeInsets.only(left: -20.0),
             leading: Image.asset('assets/images/play.png'),
             title: Text(
-              'Introduction',
+              title,
               style: TextStyle(
                 color: Color(0xFF4D2C5E),
                 fontFamily: 'Inter400',
@@ -141,7 +167,7 @@ class Playlist extends StatelessWidget {
               ),
             ),
             subtitle: Text(
-              '02:04',
+              duration,
               style: TextStyle(
                 color: Color(0xFFB9B9B9),
                 fontFamily: 'Inter400',
