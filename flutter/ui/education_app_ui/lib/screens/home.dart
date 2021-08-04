@@ -1,4 +1,5 @@
 import 'package:education_app_ui/widgets/home-screen/header.dart';
+import 'package:education_app_ui/widgets/home-screen/search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -16,6 +17,7 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               children: [
                 Header(),
+                Search(),
               ],
             ),
           ),
