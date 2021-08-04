@@ -24,7 +24,7 @@ class Content extends StatelessWidget {
               height: 21.0,
             ),
             CardContainer(
-              height: 165.0,
+              height: 219.0,
               title: 'Get Started',
               icon: SvgPicture.asset('assets/images/chevron-up.svg'),
               isOpen: true,
@@ -119,20 +119,15 @@ class CardContainer extends StatelessWidget {
             ],
           ),
           if (isOpen == true)
-            Container(
-              height: 106.0,
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Playlist(title: 'Introduction', duration: '02:04'),
-                    Divider(),
-                    Playlist(
-                      title: 'How to improve grammar',
-                      duration: '05:03',
-                    ),
-                  ],
+            Column(
+              children: [
+                Playlist(title: 'Introduction', duration: '02:04'),
+                Divider(),
+                Playlist(
+                  title: 'How to improve grammar',
+                  duration: '05:03',
                 ),
-              ),
+              ],
             ),
         ],
       ),
