@@ -1,8 +1,8 @@
 import 'package:education_app_ui/models/subject.dart';
 import 'package:flutter/material.dart';
 
-class CourseList extends StatelessWidget {
-  const CourseList({Key? key}) : super(key: key);
+class SubjectList extends StatelessWidget {
+  const SubjectList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -55,25 +55,3 @@ class CourseList extends StatelessWidget {
     );
   }
 }
-
-// ButtonBar(
-//       mainAxisSize: MainAxisSize.min,
-//       children: [
-        // for (var i = 0; i < subjects.length; i++)
-        //   ElevatedButton(
-        //     onPressed: () {},
-        //     child: Text(subjects[i].title),
-        //     style: ElevatedButton.styleFrom(
-        //       primary: Colors.white,
-        //       onPrimary: Color(0xFF575E83),
-        //       textStyle: TextStyle(
-        //         fontFamily: 'Inter400',
-        //         fontSize: 15.0,
-        //       ),
-        //       shape: RoundedRectangleBorder(
-        //         borderRadius: BorderRadius.circular(10.0),
-        //       ),
-        //     ),
-        //   ),
-//       ],
-//     );
