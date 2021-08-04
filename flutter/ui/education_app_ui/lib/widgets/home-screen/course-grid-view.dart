@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../models/course.dart';
+import '../../screens/detail.dart';
 
 class CourseGridView extends StatelessWidget {
   const CourseGridView({Key? key}) : super(key: key);
@@ -136,7 +137,9 @@ class CourseCard extends StatelessWidget {
             clipBehavior: Clip.hardEdge,
             color: Colors.transparent,
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamed(Detail.routeName);
+              },
             ),
           ),
         ),
