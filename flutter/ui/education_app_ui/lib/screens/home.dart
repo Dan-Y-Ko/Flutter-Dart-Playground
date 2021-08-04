@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/home-screen/course-grid-view.dart';
 import '../widgets/home-screen/header.dart';
 import '../widgets/home-screen/search.dart';
 import '../widgets/home-screen/subject-list.dart';
@@ -26,6 +27,10 @@ class HomeScreen extends StatelessWidget {
                   height: 26.0,
                 ),
                 SubjectList(),
+                SizedBox(
+                  height: 26.0,
+                ),
+                CourseGridView(),
               ],
             ),
           ),
