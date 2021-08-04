@@ -1,16 +1,18 @@
 # education_app_ui
 
-A new Flutter project.
+A ui focused project to get practice creating ui with Flutter.
 
-## Getting Started
+I followed a mock up implement this UI. Here is the link to the design:
 
-This project is a starting point for a Flutter application.
+https://www.uplabs.com/posts/education-app-5120f560-78c7-4eb9-99b7-69ed32d5388c
 
-A few resources to get you started if this is your first Flutter project:
+Video Demo:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+[![](https://cdn.loom.com/sessions/thumbnails/22eb99d8e70e436d9f89ce841971fb8e-with-play.gif)](https://www.loom.com/share/22eb99d8e70e436d9f89ce841971fb8e "")
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+Some thoughts:
+
+- Made some more use of existing widgets.
+- Tried a different folder structure.
+- Split up widgets, but kept related widgets in same file.
