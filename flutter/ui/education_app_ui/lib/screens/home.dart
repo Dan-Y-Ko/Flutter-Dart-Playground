@@ -52,6 +52,9 @@ class HomeScreen extends StatelessWidget {
                                 fontSize: 30.0,
                               ),
                             ),
+                            SizedBox(
+                              height: 16.0,
+                            ),
                             Text(
                               'Find a course you want to learn',
                               style: TextStyle(
