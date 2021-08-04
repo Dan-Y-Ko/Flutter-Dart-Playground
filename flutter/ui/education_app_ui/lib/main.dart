@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'screens/detail.dart';
 import 'screens/home.dart';
 
 void main() {
@@ -13,6 +14,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       home: HomeScreen(),
+      routes: {
+        Detail.routeName: (_) => Detail(),
+      },
     );
   }
 }
