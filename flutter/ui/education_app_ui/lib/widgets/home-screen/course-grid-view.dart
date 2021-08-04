@@ -1,3 +1,4 @@
+import 'package:education_app_ui/models/course.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -14,38 +15,15 @@ class CourseGridView extends StatelessWidget {
         mainAxisSpacing: 16.0,
         crossAxisCount: 2,
         children: <Widget>[
-          CourseCard(
-            title: 'Design',
-            numLecture: 54,
-            imageUrl: 'assets/images/Code_perspective.png',
-            numStudents: '1.2k',
-            rating: 4.5,
-            color: 'FEE2DE',
-          ),
-          CourseCard(
-            title: 'Design',
-            numLecture: 54,
-            imageUrl: 'assets/images/Code_perspective.png',
-            numStudents: '1.2k',
-            rating: 4.5,
-            color: 'FEE2DE',
-          ),
-          CourseCard(
-            title: 'Design',
-            numLecture: 54,
-            imageUrl: 'assets/images/Code_perspective.png',
-            numStudents: '1.2k',
-            rating: 4.5,
-            color: 'FEE2DE',
-          ),
-          CourseCard(
-            title: 'Design',
-            numLecture: 54,
-            imageUrl: 'assets/images/Code_perspective.png',
-            numStudents: '1.2k',
-            rating: 4.5,
-            color: 'FEE2DE',
-          ),
+          for (var i = 0; i < courses.length; i++)
+            CourseCard(
+              title: courses[i].title,
+              numLecture: courses[i].numLecture,
+              imageUrl: courses[i].imageUrl,
+              numStudents: courses[i].numStudents,
+              rating: courses[i].rating,
+              color: courses[i].color,
+            ),
         ],
       ),
     );
