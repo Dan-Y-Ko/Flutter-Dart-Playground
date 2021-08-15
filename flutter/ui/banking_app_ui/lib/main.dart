@@ -1,4 +1,4 @@
-import 'package:banking_app_ui/core/utils/theme/theme.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primaryColor: AppTheme().tertiaryText,
+        fontFamily: GoogleFonts.poppins().fontFamily,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
