@@ -12,6 +12,20 @@ class OnboardingScreen extends StatefulWidget {
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
+  void initState() {
+    super.initState();
+
+    SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
+  }
+
+  @override
+  void dispose() {
+    SystemChrome.setEnabledSystemUIOverlays(
+        [SystemUiOverlay.top, SystemUiOverlay.bottom]);
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppTheme().primaryBackground,
