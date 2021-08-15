@@ -29,6 +29,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppTheme().primaryBackground,
+      body: Center(
+        child: Text(
+          'Hello',
+          style: TextStyle(
+            color: AppTheme().primaryText,
+            fontSize: AppTheme().fontSizes[10],
+          ),
+        ),
+      ),
     );
   }
 }
