@@ -1,3 +1,4 @@
+import 'package:banking_app_ui/core/utils/theme/theme.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 
@@ -87,6 +88,10 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               'You have pushed the button this many times:',
+              style: TextStyle(
+                fontWeight: AppTheme().fontWeights[3],
+                fontSize: AppTheme().fontSizes[0],
+              ),
             ),
             Text(
               '$_counter',

@@ -4,6 +4,7 @@ enum ThemeElement { background, ui, text }
 enum ThemeVariant { primary, secondary, tertiary, quaternary }
 
 class AppTheme {
+  // Colors
   static const Map<ThemeElement, Map<ThemeVariant, Color>> _colors = {
     ThemeElement.background: {
       ThemeVariant.primary: Color(0xFF161730),
@@ -34,8 +35,10 @@ class AppTheme {
   Color? get secondaryText =>
       _colors[ThemeElement.text]![ThemeVariant.secondary];
   Color? get tertiaryText => _colors[ThemeElement.text]![ThemeVariant.tertiary];
+// ------------------------------------------------------------------------------------
 
-  static const List<double> fontSizes = [
+// Font Sizes
+  static const List<double> _fontSizes = [
     8.0,
     10.0,
     11.0,
@@ -52,5 +55,19 @@ class AppTheme {
     30.0
   ];
 
-  static const List<int> fontWeights = [300, 400, 500, 600];
+  List<double> get fontSizes => _fontSizes;
+
+// ------------------------------------------------------------------------------------
+
+// Font Weights
+  static const List<FontWeight> _fontWeights = [
+    FontWeight.w300,
+    FontWeight.w400,
+    FontWeight.w500,
+    FontWeight.w600
+  ];
+
+  List<FontWeight> get fontWeights => _fontWeights;
+// ------------------------------------------------------------------------------------
+
 }
