@@ -1,9 +1,9 @@
-import 'package:banking_app_ui/module/onboarding/models/screen-data.dart';
-import 'package:banking_app_ui/module/onboarding/widgets/progress-indicator-button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../../core/utils/theme/theme.dart';
+import '../models/screen-data.dart';
+import '../widgets/progress-indicator-button.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);

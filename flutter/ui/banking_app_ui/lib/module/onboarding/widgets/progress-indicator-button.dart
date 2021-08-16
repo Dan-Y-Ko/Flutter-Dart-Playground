@@ -1,7 +1,9 @@
-import 'package:banking_app_ui/core/utils/theme/theme.dart';
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'dart:math' as math;
+
+import '../../../core/utils/theme/theme.dart';
 
 class ProgressIndicatorButton extends StatelessWidget {
   const ProgressIndicatorButton({
