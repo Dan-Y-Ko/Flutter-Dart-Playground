@@ -1,3 +1,4 @@
+import 'package:banking_app_ui/module/onboarding/models/screen-data.dart';
 import 'package:banking_app_ui/module/onboarding/widgets/progress-indicator-button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -12,33 +13,6 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  final List<Map<String, dynamic>> screenData = [
-    {
-      'image': 'assets/images/onboarding_bg_1.png',
-      'headline': 'Get Bank ID',
-      'description':
-          'Our new service makes it easy for you to work anywhere, there are new features will ready help you.',
-      'startAngles': -2 * 3.14 / 3,
-      'progress': 0.4,
-    },
-    {
-      'image': 'assets/images/onboarding_bg_2.png',
-      'headline': 'Integrate With Bank',
-      'description':
-          'Our new service makes it easy for you to work anywhere, there are new features will ready help you.',
-      'startAngles': 0.0,
-      'progress': 0.3,
-    },
-    {
-      'image': 'assets/images/onboarding_bg_3.png',
-      'headline': 'Manage Finance',
-      'description':
-          'Our new service makes it easy for you to work anywhere, there are new features will ready help you.',
-      'startAngles': 2 * 3.14 / 3,
-      'progress': 0.4,
-    },
-  ];
-
   int index = 0;
 
   @override
@@ -77,12 +51,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               child: Container(
                 width: 302.0,
                 height: 282.0,
-                child: Image.asset(screenData[index]['image']),
+                child: Image.asset(screenData[index].image),
               ),
             ),
             SizedBox(height: 79.0),
             Text(
-              screenData[index]['headline'],
+              screenData[index].headline,
               style: TextStyle(
                 fontWeight: AppTheme().fontWeights[2],
                 fontSize: AppTheme().fontSizes[10],
@@ -95,7 +69,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             SizedBox(
               width: 302.0,
               child: Text(
-                screenData[index]['description'],
+                screenData[index].description,
                 style: TextStyle(
                   fontWeight: AppTheme().fontWeights[1],
                   fontSize: AppTheme().fontSizes[6],
@@ -141,9 +115,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ],
                 ),
                 ProgressIndicatorButton(
-                    progress: screenData[index]['progress'],
-                    startAngle: screenData[index]['startAngles'],
-                    onTap: handlePress),
+                  progress: screenData[index].progress,
+                  startAngle: screenData[index].startAngle,
+                  onTap: handlePress,
+                ),
               ],
             )
           ],
