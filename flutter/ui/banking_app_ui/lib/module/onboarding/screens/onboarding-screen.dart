@@ -12,6 +12,9 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
+  static const List<double> startAngles = [-2 * 3.14 / 3, 0.0, 2 * 3.14 / 3];
+  int index = 0;
+
   @override
   void initState() {
     super.initState();
@@ -24,6 +27,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     SystemChrome.setEnabledSystemUIOverlays(
         [SystemUiOverlay.top, SystemUiOverlay.bottom]);
     super.dispose();
+  }
+
+  handlePress() {
+    setState(() {
+      if (index < 2) {
+        index++;
+      }
+    });
   }
 
   @override
@@ -113,7 +124,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ),
                   ],
                 ),
-                ProgressIndicatorButton(),
+                ProgressIndicatorButton(
+                    progress: 0.4,
+                    startAngle: startAngles[index],
+                    onTap: handlePress),
               ],
             )
           ],
