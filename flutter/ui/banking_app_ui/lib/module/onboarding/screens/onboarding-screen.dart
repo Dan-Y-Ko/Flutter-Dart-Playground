@@ -12,7 +12,33 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  static const List<double> startAngles = [-2 * 3.14 / 3, 0.0, 2 * 3.14 / 3];
+  final List<Map<String, dynamic>> screenData = [
+    {
+      'image': 'assets/images/onboarding_bg_1.png',
+      'headline': 'Get Bank ID',
+      'description':
+          'Our new service makes it easy for you to work anywhere, there are new features will ready help you.',
+      'startAngles': -2 * 3.14 / 3,
+      'progress': 0.4,
+    },
+    {
+      'image': 'assets/images/onboarding_bg_2.png',
+      'headline': 'Integrate With Bank',
+      'description':
+          'Our new service makes it easy for you to work anywhere, there are new features will ready help you.',
+      'startAngles': 0.0,
+      'progress': 0.3,
+    },
+    {
+      'image': 'assets/images/onboarding_bg_3.png',
+      'headline': 'Manage Finance',
+      'description':
+          'Our new service makes it easy for you to work anywhere, there are new features will ready help you.',
+      'startAngles': 2 * 3.14 / 3,
+      'progress': 0.4,
+    },
+  ];
+
   int index = 0;
 
   @override
@@ -51,12 +77,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               child: Container(
                 width: 302.0,
                 height: 282.0,
-                child: Image.asset('assets/images/onboarding_bg_1.png'),
+                child: Image.asset(screenData[index]['image']),
               ),
             ),
             SizedBox(height: 79.0),
             Text(
-              'Get Bank ID',
+              screenData[index]['headline'],
               style: TextStyle(
                 fontWeight: AppTheme().fontWeights[2],
                 fontSize: AppTheme().fontSizes[10],
@@ -69,7 +95,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             SizedBox(
               width: 302.0,
               child: Text(
-                'Our new service makes it easy for you to work anywhere, there are new features will ready help you.',
+                screenData[index]['description'],
                 style: TextStyle(
                   fontWeight: AppTheme().fontWeights[1],
                   fontSize: AppTheme().fontSizes[6],
@@ -87,46 +113,36 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               children: [
                 Row(
                   children: [
-                    Container(
-                      width: 20.0,
-                      height: 7.0,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5.0),
-                        gradient: LinearGradient(
-                          colors: [
-                            AppTheme().primaryUI!,
-                            AppTheme().secondaryUI!,
-                          ],
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 4.0,
-                    ),
-                    Container(
-                      width: 11.0,
-                      height: 6.0,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5.0),
-                        color: AppTheme().quaternaryUI,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 4.0,
-                    ),
-                    Container(
-                      width: 11.0,
-                      height: 6.0,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5.0),
-                        color: AppTheme().quaternaryUI,
-                      ),
-                    ),
+                    for (var i = 0; i < screenData.length; i++)
+                      i != index
+                          ? Container(
+                              width: 11.0,
+                              height: 6.0,
+                              margin: EdgeInsets.only(right: 4.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5.0),
+                                color: AppTheme().quaternaryUI,
+                              ),
+                            )
+                          : Container(
+                              width: 20.0,
+                              height: 7.0,
+                              margin: EdgeInsets.only(right: 4.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5.0),
+                                gradient: LinearGradient(
+                                  colors: [
+                                    AppTheme().primaryUI!,
+                                    AppTheme().secondaryUI!,
+                                  ],
+                                ),
+                              ),
+                            ),
                   ],
                 ),
                 ProgressIndicatorButton(
-                    progress: 0.4,
-                    startAngle: startAngles[index],
+                    progress: screenData[index]['progress'],
+                    startAngle: screenData[index]['startAngles'],
                     onTap: handlePress),
               ],
             )

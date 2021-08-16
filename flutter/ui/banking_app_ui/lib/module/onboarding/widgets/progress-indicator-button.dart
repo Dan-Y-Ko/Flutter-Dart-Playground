@@ -38,7 +38,7 @@ class ProgressIndicatorButton extends StatelessWidget {
           height: BUTTON_SIZE,
           child: CustomPaint(
             painter: GradientArcPainter(
-              progress: 0.4,
+              progress: progress,
               width: BUTTON_WIDTH,
               startAngle: startAngle,
             ),
@@ -118,16 +118,3 @@ class GradientArcPainter extends CustomPainter {
   @override
   bool shouldRepaint(CustomPainter oldDelegate) => false;
 }
-
-
-// screen 1
-// startAngle = -2 * math.pi / 3;
-// sweepAngle = 2 * math.pi * progress;
-
-// screen 2
-// startAngle = 0.0;
-// sweepAngle = 2 * math.pi * progress;
-
-// screen 3
-// startAngle = 2 * math.pi / 3;
-// sweepAngle = 2 * math.pi * progress;
