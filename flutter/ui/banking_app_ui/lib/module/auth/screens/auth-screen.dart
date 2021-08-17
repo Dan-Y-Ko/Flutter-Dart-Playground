@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../core/utils/theme/theme.dart';
 import '../../../core/widgets/button.dart';
 import '../../../core/widgets/input.dart';
+import '../../home/screens/home.dart';
 import '../widgets/back-arrow-widget.dart';
 import 'index.dart';
 
@@ -19,8 +20,10 @@ class AuthScreen extends StatelessWidget {
     Navigator.of(context).pushNamed(AuthScreen.routeName);
   }
 
-  void navigateToHomeScreen(BuildContext context) {
-    Navigator.of(context).pushNamed(AuthScreen.routeName);
+  void navigateToNextScreen(BuildContext context, int id) {
+    if (id == 0) {
+      Navigator.of(context).pushNamed(HomeScreen.routeName);
+    }
   }
 
   @override
@@ -111,7 +114,9 @@ class AuthScreen extends StatelessWidget {
                   text: args.buttonText,
                   padding: EdgeInsets.all(0.0),
                   borderRadius: BorderRadius.circular(10.0),
-                  onPress: (context, id) => navigateToHomeScreen(context),
+                  onPress: !args.isSignupScreen
+                      ? (context, id) => navigateToNextScreen(context, 0)
+                      : (context, id) => navigateToNextScreen(context, 1),
                   backgroundColor: Colors.transparent,
                   gradient: LinearGradient(
                     colors: [
@@ -192,6 +197,12 @@ class AuthScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10.0),
                         onPress: (context, id) => {},
                         backgroundColor: AppTheme().tertiaryUI!,
+                        gradient: LinearGradient(
+                          colors: [
+                            AppTheme().primaryUI!,
+                            AppTheme().secondaryUI!,
+                          ],
+                        ),
                         icon: SvgPicture.asset('assets/images/google_icon.svg'),
                       ),
                     ),
