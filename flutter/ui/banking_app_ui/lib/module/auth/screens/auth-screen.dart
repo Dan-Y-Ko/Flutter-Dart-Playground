@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../../core/utils/theme/theme.dart';
 import '../../../core/widgets/button.dart';
@@ -99,24 +100,60 @@ class AuthScreen extends StatelessWidget {
                 Center(
                   child: RichText(
                     text: TextSpan(
-                        text: 'Don’t have an account? ',
-                        style: TextStyle(
-                          fontWeight: AppTheme().fontWeights[1],
-                          fontSize: AppTheme().fontSizes[4],
-                          color: AppTheme().primaryText,
-                        ),
-                        children: [
-                          TextSpan(
-                            text: 'Sign In',
-                            style: TextStyle(
-                              fontWeight: AppTheme().fontWeights[2],
-                              fontSize: AppTheme().fontSizes[4],
-                              color: AppTheme().secondaryText,
-                            ),
+                      text: 'Don’t have an account? ',
+                      style: TextStyle(
+                        fontWeight: AppTheme().fontWeights[1],
+                        fontSize: AppTheme().fontSizes[4],
+                        color: AppTheme().primaryText,
+                      ),
+                      children: [
+                        TextSpan(
+                          text: 'Sign In',
+                          style: TextStyle(
+                            fontWeight: AppTheme().fontWeights[2],
+                            fontSize: AppTheme().fontSizes[4],
+                            color: AppTheme().secondaryText,
                           ),
-                        ]),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
+                SizedBox(
+                  height: 89.0,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.only(left: 10.0, right: 15.0),
+                        child: Divider(
+                          color: AppTheme().primaryText,
+                          thickness: 1.0,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      'or continue with',
+                      style: TextStyle(
+                        color: AppTheme().primaryText,
+                        fontFamily: GoogleFonts.roboto().fontFamily,
+                        fontWeight: AppTheme().fontWeights[1],
+                        fontSize: AppTheme().fontSizes[6],
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.only(left: 10.0, right: 15.0),
+                        child: Divider(
+                          color: AppTheme().primaryText,
+                          thickness: 1.0,
+                        ),
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
           ),
