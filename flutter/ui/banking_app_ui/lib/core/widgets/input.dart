@@ -42,6 +42,9 @@ class Input extends StatelessWidget {
             child: suffixIcon,
           ),
         ),
+        style: TextStyle(
+          color: AppTheme().primaryText,
+        ),
       ),
     );
   }
