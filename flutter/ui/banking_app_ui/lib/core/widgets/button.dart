@@ -21,7 +21,7 @@ class CustomButton extends StatelessWidget {
   final Color backgroundColor;
   final EdgeInsetsGeometry padding;
   final Color? borderColor;
-  final void Function(BuildContext) onPress;
+  final void Function(BuildContext, int?) onPress;
   final LinearGradient? gradient;
   final SvgPicture? icon;
 
@@ -33,7 +33,7 @@ class CustomButton extends StatelessWidget {
         decoration:
             BoxDecoration(borderRadius: borderRadius, gradient: gradient),
         child: ElevatedButton(
-          onPressed: () => onPress(context),
+          onPressed: () => onPress(context, 0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

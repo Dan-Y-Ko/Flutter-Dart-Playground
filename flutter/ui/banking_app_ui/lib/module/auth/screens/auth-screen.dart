@@ -6,11 +6,18 @@ import '../../../core/utils/theme/theme.dart';
 import '../../../core/widgets/button.dart';
 import '../../../core/widgets/input.dart';
 import '../widgets/back-arrow-widget.dart';
+import 'index.dart';
 
 class AuthScreen extends StatelessWidget {
-  const AuthScreen({Key? key}) : super(key: key);
+  const AuthScreen({
+    Key? key,
+  }) : super(key: key);
 
   static const routeName = '/auth';
+
+  void navigateToAuth(context) {
+    Navigator.of(context).pushNamed(AuthScreen.routeName);
+  }
 
   void navigateToHomeScreen(BuildContext context) {
     Navigator.of(context).pushNamed(AuthScreen.routeName);
@@ -18,6 +25,8 @@ class AuthScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final args = ModalRoute.of(context)!.settings.arguments as ScreenArguments;
+
     return Scaffold(
       backgroundColor: AppTheme().primaryBackground,
       body: SingleChildScrollView(
@@ -35,7 +44,7 @@ class AuthScreen extends StatelessWidget {
                       width: 63.0,
                     ),
                     Text(
-                      "Let's Sign In",
+                      args.appBarText,
                       style: TextStyle(
                         color: AppTheme().primaryText,
                         fontWeight: AppTheme().fontWeights[2],
@@ -54,7 +63,7 @@ class AuthScreen extends StatelessWidget {
                     width: 143.0,
                     height: 78.0,
                     child: Text(
-                      'Welcome Back!',
+                      args.title,
                       style: TextStyle(
                         fontWeight: AppTheme().fontWeights[2],
                         fontSize: AppTheme().fontSizes[13],
@@ -73,19 +82,36 @@ class AuthScreen extends StatelessWidget {
                 SizedBox(
                   height: 20.0,
                 ),
+                args.isSignupScreen
+                    ? Column(
+                        children: [
+                          Input(
+                            hintText: 'Email',
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          SizedBox(
+                            height: 20.0,
+                          )
+                        ],
+                      )
+                    : SizedBox(height: 0.0),
                 Input(
                   hintText: 'Password',
                   borderRadius: BorderRadius.circular(10.0),
                   suffixIcon: SvgPicture.asset('assets/images/some_icon.svg'),
                 ),
-                SizedBox(
-                  height: 107.0,
-                ),
+                args.isSignupScreen
+                    ? SizedBox(
+                        height: 35.0,
+                      )
+                    : SizedBox(
+                        height: 107.0,
+                      ),
                 CustomButton(
-                  text: 'Sign In',
+                  text: args.buttonText,
                   padding: EdgeInsets.all(0.0),
                   borderRadius: BorderRadius.circular(10.0),
-                  onPress: navigateToHomeScreen,
+                  onPress: (context, id) => navigateToHomeScreen(context),
                   backgroundColor: Colors.transparent,
                   gradient: LinearGradient(
                     colors: [
@@ -100,7 +126,7 @@ class AuthScreen extends StatelessWidget {
                 Center(
                   child: RichText(
                     text: TextSpan(
-                      text: 'Don’t have an account? ',
+                      text: args.subText,
                       style: TextStyle(
                         fontWeight: AppTheme().fontWeights[1],
                         fontSize: AppTheme().fontSizes[4],
@@ -164,7 +190,7 @@ class AuthScreen extends StatelessWidget {
                         text: 'Sign In',
                         padding: EdgeInsets.all(0.0),
                         borderRadius: BorderRadius.circular(10.0),
-                        onPress: (context) => {},
+                        onPress: (context, id) => {},
                         backgroundColor: AppTheme().tertiaryUI!,
                         icon: SvgPicture.asset('assets/images/google_icon.svg'),
                       ),
@@ -177,7 +203,7 @@ class AuthScreen extends StatelessWidget {
                         text: 'Sign In',
                         padding: EdgeInsets.all(0.0),
                         borderRadius: BorderRadius.circular(10.0),
-                        onPress: (context) => {},
+                        onPress: (context, id) => {},
                         backgroundColor: AppTheme().tertiaryUI!,
                         icon: SvgPicture.asset('assets/images/apple_icon.svg'),
                       ),

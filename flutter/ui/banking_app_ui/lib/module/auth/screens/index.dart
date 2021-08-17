@@ -5,6 +5,22 @@ import '../../../core/utils/theme/theme.dart';
 import '../../../core/widgets/button.dart';
 import 'auth-screen.dart';
 
+class ScreenArguments {
+  final String appBarText;
+  final String title;
+  final String buttonText;
+  final String subText;
+  final bool isSignupScreen;
+
+  const ScreenArguments({
+    required this.appBarText,
+    required this.title,
+    required this.buttonText,
+    required this.subText,
+    required this.isSignupScreen,
+  });
+}
+
 class SignInAndSignUpScreen extends StatefulWidget {
   const SignInAndSignUpScreen({Key? key}) : super(key: key);
 
@@ -23,8 +39,31 @@ class _SignInAndSignUpScreenState extends State<SignInAndSignUpScreen> {
         [SystemUiOverlay.top, SystemUiOverlay.bottom]);
   }
 
-  void navigateToAuth(BuildContext context) {
-    Navigator.of(context).pushNamed(AuthScreen.routeName);
+  void navigateToAuth(BuildContext context, int? id) {
+    if (id == 1) {
+      Navigator.of(context).pushNamed(
+        AuthScreen.routeName,
+        arguments: ScreenArguments(
+            appBarText: "Let's Sign In",
+            title: 'Welcome Back!',
+            buttonText: 'Sign In',
+            subText: 'Don’t have an account? ',
+            isSignupScreen: false),
+      );
+    }
+
+    if (id == 2) {
+      Navigator.of(context).pushNamed(
+        AuthScreen.routeName,
+        arguments: ScreenArguments(
+          appBarText: "Let’s Sign Up",
+          title: 'Create Account!',
+          buttonText: 'Sign Up',
+          subText: 'Already have an account? ',
+          isSignupScreen: true,
+        ),
+      );
+    }
   }
 
   @override
@@ -57,7 +96,7 @@ class _SignInAndSignUpScreenState extends State<SignInAndSignUpScreen> {
               borderRadius: BorderRadius.circular(10.0),
               backgroundColor: AppTheme().primaryUI!,
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
-              onPress: navigateToAuth,
+              onPress: (context, id) => navigateToAuth(context, 1),
             ),
             SizedBox(
               height: 17.0,
@@ -68,7 +107,7 @@ class _SignInAndSignUpScreenState extends State<SignInAndSignUpScreen> {
               backgroundColor: AppTheme().secondaryUI!,
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               borderColor: AppTheme().primaryText!,
-              onPress: navigateToAuth,
+              onPress: (context, id) => navigateToAuth(context, 2),
             ),
           ],
         ),
