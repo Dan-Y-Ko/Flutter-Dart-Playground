@@ -195,6 +195,7 @@ class AuthScreen extends StatelessWidget {
                         onPress: (context, id) => {},
                         backgroundColor: AppTheme().tertiaryUI!,
                         icon: SvgPicture.asset('assets/images/google_icon.svg'),
+                        height: 52.0,
                       ),
                     ),
                     SizedBox(
@@ -208,6 +209,7 @@ class AuthScreen extends StatelessWidget {
                         onPress: (context, id) => {},
                         backgroundColor: AppTheme().tertiaryUI!,
                         icon: SvgPicture.asset('assets/images/apple_icon.svg'),
+                        height: 52.0,
                       ),
                     ),
                   ],

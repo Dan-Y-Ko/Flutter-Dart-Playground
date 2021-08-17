@@ -97,6 +97,7 @@ class _SignInAndSignUpScreenState extends State<SignInAndSignUpScreen> {
               backgroundColor: AppTheme().primaryUI!,
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               onPress: (context, id) => navigateToAuth(context, 1),
+              height: 52.0,
             ),
             SizedBox(
               height: 17.0,
@@ -108,6 +109,7 @@ class _SignInAndSignUpScreenState extends State<SignInAndSignUpScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               borderColor: AppTheme().primaryText!,
               onPress: (context, id) => navigateToAuth(context, 2),
+              height: 52.0,
             ),
           ],
         ),

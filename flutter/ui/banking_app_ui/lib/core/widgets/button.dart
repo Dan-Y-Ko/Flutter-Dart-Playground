@@ -12,8 +12,8 @@ class CustomButton extends StatelessWidget {
     required this.padding,
     this.borderColor,
     required this.onPress,
-    this.gradient,
     this.icon,
+    required this.height,
   }) : super(key: key);
 
   final String text;
@@ -22,17 +22,16 @@ class CustomButton extends StatelessWidget {
   final EdgeInsetsGeometry padding;
   final Color? borderColor;
   final void Function(BuildContext, int?) onPress;
-  final LinearGradient? gradient;
   final SvgPicture? icon;
+  final double height;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: padding,
       child: Container(
-        decoration:
-            BoxDecoration(borderRadius: borderRadius, gradient: gradient),
-        child: ElevatedButton(
+        height: height,
+        child: TextButton(
           onPressed: () => onPress(context, 0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -46,10 +45,9 @@ class CustomButton extends StatelessWidget {
               ),
             ],
           ),
-          style: ElevatedButton.styleFrom(
-            fixedSize: Size(double.infinity, 54.0),
-            elevation: 0,
-            primary: backgroundColor,
+          style: TextButton.styleFrom(
+            primary: AppTheme().primaryText,
+            backgroundColor: backgroundColor,
             textStyle: TextStyle(
               fontWeight: AppTheme().fontWeights[2],
               fontSize: AppTheme().fontSizes[6],
