@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../core/utils/theme/theme.dart';
 import '../../../core/widgets/button.dart';
+import '../../../core/widgets/gradient-button.dart';
 import '../../../core/widgets/input.dart';
 import '../../home/screens/home.dart';
 import '../widgets/back-arrow-widget.dart';
@@ -110,20 +111,16 @@ class AuthScreen extends StatelessWidget {
                     : SizedBox(
                         height: 107.0,
                       ),
-                CustomButton(
+                GradientButton(
                   text: args.buttonText,
                   padding: EdgeInsets.all(0.0),
-                  borderRadius: BorderRadius.circular(10.0),
                   onPress: !args.isSignupScreen
                       ? (context, id) => navigateToNextScreen(context, 0)
                       : (context, id) => navigateToNextScreen(context, 1),
-                  backgroundColor: Colors.transparent,
-                  gradient: LinearGradient(
-                    colors: [
-                      AppTheme().primaryUI!,
-                      AppTheme().secondaryUI!,
-                    ],
-                  ),
+                  colors: [
+                    AppTheme().primaryUI!,
+                    AppTheme().secondaryUI!,
+                  ],
                 ),
                 SizedBox(
                   height: 15.0,
@@ -197,12 +194,6 @@ class AuthScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10.0),
                         onPress: (context, id) => {},
                         backgroundColor: AppTheme().tertiaryUI!,
-                        gradient: LinearGradient(
-                          colors: [
-                            AppTheme().primaryUI!,
-                            AppTheme().secondaryUI!,
-                          ],
-                        ),
                         icon: SvgPicture.asset('assets/images/google_icon.svg'),
                       ),
                     ),
