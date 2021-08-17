@@ -18,14 +18,14 @@ class ButtonWidget extends StatelessWidget {
   final Color backgroundColor;
   final EdgeInsetsGeometry padding;
   final Color? borderColor;
-  final void Function() onPress;
+  final void Function(BuildContext) onPress;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: padding,
       child: ElevatedButton(
-        onPressed: onPress,
+        onPressed: () => onPress(context),
         child: Text(
           text,
         ),

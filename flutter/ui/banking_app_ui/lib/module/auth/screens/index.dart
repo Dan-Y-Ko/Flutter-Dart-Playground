@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../../../core/utils/theme/theme.dart';
 import '../../../core/widgets/button-widget.dart';
+import 'auth-screen.dart';
 
 class SignInAndSignUpScreen extends StatefulWidget {
   const SignInAndSignUpScreen({Key? key}) : super(key: key);
@@ -20,6 +21,10 @@ class _SignInAndSignUpScreenState extends State<SignInAndSignUpScreen> {
 
     SystemChrome.setEnabledSystemUIOverlays(
         [SystemUiOverlay.top, SystemUiOverlay.bottom]);
+  }
+
+  void navigateToAuth(BuildContext context) {
+    Navigator.of(context).pushNamed(AuthScreen.routeName);
   }
 
   @override
@@ -52,7 +57,7 @@ class _SignInAndSignUpScreenState extends State<SignInAndSignUpScreen> {
               borderRadius: BorderRadius.circular(10.0),
               backgroundColor: AppTheme().primaryUI!,
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
-              onPress: () {},
+              onPress: navigateToAuth,
             ),
             SizedBox(
               height: 17.0,
@@ -63,7 +68,7 @@ class _SignInAndSignUpScreenState extends State<SignInAndSignUpScreen> {
               backgroundColor: AppTheme().secondaryUI!,
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               borderColor: AppTheme().primaryText!,
-              onPress: () {},
+              onPress: navigateToAuth,
             ),
           ],
         ),

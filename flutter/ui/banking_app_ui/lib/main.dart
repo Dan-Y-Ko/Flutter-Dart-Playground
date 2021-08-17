@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'module/auth/screens/auth-screen.dart';
 import 'module/auth/screens/index.dart';
 import 'module/onboarding/screens/onboarding-screen.dart';
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       home: OnboardingScreen(),
       routes: {
         SignInAndSignUpScreen.routeName: (_) => SignInAndSignUpScreen(),
+        AuthScreen.routeName: (_) => AuthScreen(),
       },
     );
   }
