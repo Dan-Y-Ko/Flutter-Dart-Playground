@@ -153,7 +153,37 @@ class AuthScreen extends StatelessWidget {
                       ),
                     ),
                   ],
-                )
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: CustomButton(
+                        text: 'Sign In',
+                        padding: EdgeInsets.all(0.0),
+                        borderRadius: BorderRadius.circular(10.0),
+                        onPress: (context) => {},
+                        backgroundColor: AppTheme().tertiaryUI!,
+                        icon: SvgPicture.asset('assets/images/google_icon.svg'),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 19.0,
+                    ),
+                    Expanded(
+                      child: CustomButton(
+                        text: 'Sign In',
+                        padding: EdgeInsets.all(0.0),
+                        borderRadius: BorderRadius.circular(10.0),
+                        onPress: (context) => {},
+                        backgroundColor: AppTheme().tertiaryUI!,
+                        icon: SvgPicture.asset('assets/images/apple_icon.svg'),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),

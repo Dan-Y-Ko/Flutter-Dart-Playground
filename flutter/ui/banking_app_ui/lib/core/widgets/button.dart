@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../utils/theme/theme.dart';
 
@@ -12,6 +13,7 @@ class CustomButton extends StatelessWidget {
     this.borderColor,
     required this.onPress,
     this.gradient,
+    this.icon,
   }) : super(key: key);
 
   final String text;
@@ -21,6 +23,7 @@ class CustomButton extends StatelessWidget {
   final Color? borderColor;
   final void Function(BuildContext) onPress;
   final LinearGradient? gradient;
+  final SvgPicture? icon;
 
   @override
   Widget build(BuildContext context) {
@@ -31,8 +34,17 @@ class CustomButton extends StatelessWidget {
             BoxDecoration(borderRadius: borderRadius, gradient: gradient),
         child: ElevatedButton(
           onPressed: () => onPress(context),
-          child: Text(
-            text,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                margin: EdgeInsets.all(5.0),
+                child: icon,
+              ),
+              Text(
+                text,
+              ),
+            ],
           ),
           style: ElevatedButton.styleFrom(
             elevation: 0,
