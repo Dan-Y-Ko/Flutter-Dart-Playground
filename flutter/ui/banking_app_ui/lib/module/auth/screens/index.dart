@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../../core/utils/theme/theme.dart';
-import '../../../core/widgets/button-widget.dart';
+import '../../../core/widgets/button.dart';
 import 'auth-screen.dart';
 
 class SignInAndSignUpScreen extends StatefulWidget {
@@ -52,7 +52,7 @@ class _SignInAndSignUpScreenState extends State<SignInAndSignUpScreen> {
             SizedBox(
               height: 80.0,
             ),
-            ButtonWidget(
+            CustomButton(
               text: 'Sign In',
               borderRadius: BorderRadius.circular(10.0),
               backgroundColor: AppTheme().primaryUI!,
@@ -62,7 +62,7 @@ class _SignInAndSignUpScreenState extends State<SignInAndSignUpScreen> {
             SizedBox(
               height: 17.0,
             ),
-            ButtonWidget(
+            CustomButton(
               text: 'Sign Up',
               borderRadius: BorderRadius.circular(10.0),
               backgroundColor: AppTheme().secondaryUI!,

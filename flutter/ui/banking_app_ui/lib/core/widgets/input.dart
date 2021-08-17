@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../utils/theme/theme.dart';
 
@@ -7,10 +8,12 @@ class Input extends StatelessWidget {
     Key? key,
     required this.hintText,
     required this.borderRadius,
+    this.suffixIcon,
   }) : super(key: key);
 
   final String hintText;
   final BorderRadius borderRadius;
+  final SvgPicture? suffixIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +36,10 @@ class Input extends StatelessWidget {
           border: OutlineInputBorder(
             borderRadius: borderRadius,
             borderSide: BorderSide.none,
+          ),
+          suffixIcon: Padding(
+            padding: const EdgeInsets.all(18.0),
+            child: suffixIcon,
           ),
         ),
       ),

@@ -1,13 +1,19 @@
-import '../../../core/widgets/input.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../core/utils/theme/theme.dart';
+import '../../../core/widgets/button.dart';
+import '../../../core/widgets/input.dart';
 import '../widgets/back-arrow-widget.dart';
 
 class AuthScreen extends StatelessWidget {
   const AuthScreen({Key? key}) : super(key: key);
 
   static const routeName = '/auth';
+
+  void navigateToHomeScreen(BuildContext context) {
+    Navigator.of(context).pushNamed(AuthScreen.routeName);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +24,7 @@ class AuthScreen extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -62,6 +69,30 @@ class AuthScreen extends StatelessWidget {
                   hintText: 'Name',
                   borderRadius: BorderRadius.circular(10.0),
                 ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Input(
+                  hintText: 'Password',
+                  borderRadius: BorderRadius.circular(10.0),
+                  suffixIcon: SvgPicture.asset('assets/images/some_icon.svg'),
+                ),
+                SizedBox(
+                  height: 107.0,
+                ),
+                CustomButton(
+                  text: 'Sign In',
+                  padding: EdgeInsets.all(0.0),
+                  borderRadius: BorderRadius.circular(10.0),
+                  onPress: navigateToHomeScreen,
+                  backgroundColor: Colors.transparent,
+                  gradient: LinearGradient(
+                    colors: [
+                      AppTheme().primaryUI!,
+                      AppTheme().secondaryUI!,
+                    ],
+                  ),
+                )
               ],
             ),
           ),
