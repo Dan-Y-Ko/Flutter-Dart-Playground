@@ -39,7 +39,7 @@ class ProgressIndicatorButton extends StatelessWidget {
           width: BUTTON_SIZE,
           height: BUTTON_SIZE,
           child: CustomPaint(
-            painter: GradientArcPainter(
+            painter: ProgressIndicatorPainter(
               progress: progress,
               width: BUTTON_WIDTH,
               startAngle: startAngle,
@@ -85,8 +85,8 @@ class ProgressIndicatorButton extends StatelessWidget {
   }
 }
 
-class GradientArcPainter extends CustomPainter {
-  const GradientArcPainter({
+class ProgressIndicatorPainter extends CustomPainter {
+  const ProgressIndicatorPainter({
     required this.progress,
     required this.width,
     required this.startAngle,
@@ -98,23 +98,21 @@ class GradientArcPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final rect = new Rect.fromLTWH(0.0, 0.0, size.width, size.height);
-    final gradient = new SweepGradient(
-      startAngle: 3 * math.pi / 2,
-      endAngle: 7 * math.pi / 2,
-      colors: [AppTheme().secondaryUI!, AppTheme().secondaryUI!],
-    );
-
-    final paint = new Paint()
-      ..shader = gradient.createShader(rect)
+    final paint = Paint()
+      ..color = AppTheme().secondaryUI!
       ..strokeCap = StrokeCap.butt
       ..style = PaintingStyle.stroke
       ..strokeWidth = width;
     final center = new Offset(size.width / 2, size.height / 2);
     final radius = math.min(size.width / 2, size.height / 2) - (width / 2);
     final sweepAngle = 2 * math.pi * progress;
-    canvas.drawArc(new Rect.fromCircle(center: center, radius: radius),
-        startAngle, sweepAngle, false, paint);
+    canvas.drawArc(
+      Rect.fromCircle(center: center, radius: radius),
+      startAngle,
+      sweepAngle,
+      false,
+      paint,
+    );
   }
 
   @override
