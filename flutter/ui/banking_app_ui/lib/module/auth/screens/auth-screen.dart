@@ -92,7 +92,31 @@ class AuthScreen extends StatelessWidget {
                       AppTheme().secondaryUI!,
                     ],
                   ),
-                )
+                ),
+                SizedBox(
+                  height: 15.0,
+                ),
+                Center(
+                  child: RichText(
+                    text: TextSpan(
+                        text: 'Don’t have an account? ',
+                        style: TextStyle(
+                          fontWeight: AppTheme().fontWeights[1],
+                          fontSize: AppTheme().fontSizes[4],
+                          color: AppTheme().primaryText,
+                        ),
+                        children: [
+                          TextSpan(
+                            text: 'Sign In',
+                            style: TextStyle(
+                              fontWeight: AppTheme().fontWeights[2],
+                              fontSize: AppTheme().fontSizes[4],
+                              color: AppTheme().secondaryText,
+                            ),
+                          ),
+                        ]),
+                  ),
+                ),
               ],
             ),
           ),
