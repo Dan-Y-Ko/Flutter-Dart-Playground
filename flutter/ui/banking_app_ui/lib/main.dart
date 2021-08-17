@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'module/auth/screens/index.dart';
 import 'module/onboarding/screens/onboarding-screen.dart';
 
 void main() {
@@ -18,6 +19,9 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.poppins().fontFamily,
       ),
       home: OnboardingScreen(),
+      routes: {
+        SignInAndSignUpScreen.routeName: (_) => SignInAndSignUpScreen(),
+      },
     );
   }
 }

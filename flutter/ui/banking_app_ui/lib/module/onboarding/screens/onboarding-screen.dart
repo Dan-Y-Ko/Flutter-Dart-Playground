@@ -1,3 +1,4 @@
+import 'package:banking_app_ui/module/auth/screens/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -33,6 +34,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     setState(() {
       if (index < 2) {
         index++;
+      } else {
+        Navigator.of(context).pushNamed(SignInAndSignUpScreen.routeName);
       }
     });
   }
