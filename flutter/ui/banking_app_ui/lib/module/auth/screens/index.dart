@@ -1,8 +1,8 @@
-import 'package:banking_app_ui/core/widgets/button-widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:banking_app_ui/core/utils/theme/theme.dart';
+import '../../../core/utils/theme/theme.dart';
+import '../../../core/widgets/button-widget.dart';
 
 class SignInAndSignUpScreen extends StatefulWidget {
   const SignInAndSignUpScreen({Key? key}) : super(key: key);

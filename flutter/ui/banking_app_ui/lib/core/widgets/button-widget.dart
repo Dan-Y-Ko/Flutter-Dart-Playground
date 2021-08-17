@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:banking_app_ui/core/utils/theme/theme.dart';
+import '../utils/theme/theme.dart';
 
 class ButtonWidget extends StatelessWidget {
   const ButtonWidget({

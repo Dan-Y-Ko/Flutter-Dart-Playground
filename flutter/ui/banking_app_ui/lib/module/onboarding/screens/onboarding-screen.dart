@@ -1,8 +1,8 @@
-import 'package:banking_app_ui/module/auth/screens/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../../core/utils/theme/theme.dart';
+import '../../auth/screens/index.dart';
 import '../models/screen-data.dart';
 import '../widgets/progress-indicator-button.dart';
 
