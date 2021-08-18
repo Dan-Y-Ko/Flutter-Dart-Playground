@@ -2,12 +2,20 @@ import 'package:flutter/material.dart';
 
 import '../../../core/utils/theme/theme.dart';
 import '../../../core/widgets/credit-card.dart';
+import '../../../core/widgets/custom_indicator.dart';
 import '../../../core/widgets/header.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   static const routeName = '/home';
+
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  var _currentPage = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +56,14 @@ class HomeScreen extends StatelessWidget {
               ),
               SizedBox(
                 height: 194.0,
-                child: ListView.builder(
+                child: PageView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: 2,
+                  itemCount: 3,
+                  onPageChanged: (index) {
+                    setState(() {
+                      _currentPage = index;
+                    });
+                  },
                   itemBuilder: (BuildContext context, int index) {
                     return Padding(
                       padding: EdgeInsets.symmetric(horizontal: 25.0),
@@ -58,6 +71,18 @@ class HomeScreen extends StatelessWidget {
                     );
                   },
                 ),
+              ),
+              SizedBox(
+                height: 12.0,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CustomIndicator(
+                    index: _currentPage,
+                    data: [0, 1, 2],
+                  ),
+                ],
               ),
             ],
           ),
