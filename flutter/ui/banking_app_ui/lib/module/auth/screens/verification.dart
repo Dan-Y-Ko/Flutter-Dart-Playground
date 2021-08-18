@@ -1,8 +1,9 @@
 import 'package:banking_app_ui/core/utils/theme/theme.dart';
 import 'package:banking_app_ui/core/widgets/gradient-button.dart';
 import 'package:banking_app_ui/core/widgets/header.dart';
-import 'package:banking_app_ui/core/widgets/input.dart';
 import 'package:banking_app_ui/core/widgets/verification-input.dart';
+import 'package:banking_app_ui/module/auth/screens/reset-password.dart';
+import 'package:banking_app_ui/module/auth/widgets/instruction-text.dart';
 import 'package:flutter/material.dart';
 
 class Verification extends StatelessWidget {
@@ -27,18 +28,7 @@ class Verification extends StatelessWidget {
                 SizedBox(
                   height: 23.0,
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Text(
-                    'Enter the code we sent you',
-                    style: TextStyle(
-                      fontWeight: AppTheme().fontWeights[1],
-                      fontSize: AppTheme().fontSizes[7],
-                      color: AppTheme().primaryText,
-                      height: 1.7,
-                    ),
-                  ),
-                ),
+                InstructionText(text: 'Enter the code we sent you'),
                 SizedBox(
                   height: 95.0,
                 ),
@@ -63,7 +53,9 @@ class Verification extends StatelessWidget {
                 GradientButton(
                   text: 'Send Code',
                   padding: EdgeInsets.zero,
-                  onPress: (context, id) {},
+                  onPress: (context, id) {
+                    Navigator.of(context).pushNamed(ResetPassword.routeName);
+                  },
                   colors: [
                     AppTheme().primaryUI!,
                     AppTheme().secondaryUI!,

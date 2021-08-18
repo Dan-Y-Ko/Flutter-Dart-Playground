@@ -105,10 +105,6 @@ class AuthScreen extends StatelessWidget {
                   onPress: !args.isSignupScreen
                       ? (context, id) => navigateToNextScreen(context, 0)
                       : (context, id) => navigateToNextScreen(context, 1),
-                  colors: [
-                    AppTheme().primaryUI!,
-                    AppTheme().secondaryUI!,
-                  ],
                 ),
                 SizedBox(
                   height: 15.0,

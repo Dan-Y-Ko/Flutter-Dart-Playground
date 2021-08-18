@@ -1,9 +1,11 @@
+import 'package:banking_app_ui/module/auth/widgets/instruction-text.dart';
+import 'package:flutter/material.dart';
+
 import 'package:banking_app_ui/core/utils/theme/theme.dart';
 import 'package:banking_app_ui/core/widgets/gradient-button.dart';
 import 'package:banking_app_ui/core/widgets/header.dart';
 import 'package:banking_app_ui/core/widgets/input.dart';
 import 'package:banking_app_ui/module/auth/screens/verification.dart';
-import 'package:flutter/material.dart';
 
 class ForgotPassword extends StatelessWidget {
   const ForgotPassword({Key? key}) : super(key: key);
@@ -27,18 +29,9 @@ class ForgotPassword extends StatelessWidget {
                 SizedBox(
                   height: 23.0,
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Text(
-                    'We need your registration phon number to send you password reset code!',
-                    style: TextStyle(
-                      fontWeight: AppTheme().fontWeights[1],
-                      fontSize: AppTheme().fontSizes[7],
-                      color: AppTheme().primaryText,
-                      height: 1.7,
-                    ),
-                  ),
-                ),
+                InstructionText(
+                    text:
+                        'We need your registration phon number to send you password reset code!'),
                 SizedBox(
                   height: 74.0,
                 ),
@@ -55,10 +48,6 @@ class ForgotPassword extends StatelessWidget {
                   onPress: (context, id) {
                     Navigator.of(context).pushNamed(Verification.routeName);
                   },
-                  colors: [
-                    AppTheme().primaryUI!,
-                    AppTheme().secondaryUI!,
-                  ],
                 )
               ],
             ),

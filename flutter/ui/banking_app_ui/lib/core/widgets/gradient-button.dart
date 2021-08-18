@@ -9,14 +9,12 @@ class GradientButton extends StatelessWidget {
     required this.text,
     required this.padding,
     required this.onPress,
-    required this.colors,
     this.icon,
   }) : super(key: key);
 
   final String text;
   final EdgeInsetsGeometry padding;
   final void Function(BuildContext, int?) onPress;
-  final List<Color> colors;
   final SvgPicture? icon;
 
   @override
@@ -27,7 +25,10 @@ class GradientButton extends StatelessWidget {
         height: 52.0,
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: colors,
+            colors: [
+              AppTheme().primaryUI!,
+              AppTheme().secondaryUI!,
+            ],
           ),
           borderRadius: BorderRadiusDirectional.circular(10.0),
         ),
