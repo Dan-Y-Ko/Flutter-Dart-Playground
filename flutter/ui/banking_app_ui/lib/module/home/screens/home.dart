@@ -46,9 +46,18 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: 10.0,
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 25.0),
-                child: CreditCard(),
+              SizedBox(
+                height: 194.0,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 2,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 25.0),
+                      child: CreditCard(),
+                    );
+                  },
+                ),
               ),
             ],
           ),
