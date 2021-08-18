@@ -1,3 +1,5 @@
+import 'package:banking_app_ui/module/payment/screens/payment.dart';
+import 'package:banking_app_ui/module/profile/screens/profile.dart';
 import 'package:flutter/material.dart';
 
 import '../../module/home/screens/home.dart';
@@ -25,6 +27,8 @@ class _MainFlowState extends State<MainFlow> {
   List<Widget> _screens = [
     HomeScreen(),
     Statistic(),
+    Payment(),
+    Profile(),
   ];
 
   @override
