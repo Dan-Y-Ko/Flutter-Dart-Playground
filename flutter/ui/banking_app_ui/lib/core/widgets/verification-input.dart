@@ -1,5 +1,6 @@
-import 'package:banking_app_ui/core/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
+
+import '../utils/theme/theme.dart';
 
 class VerificationInput extends StatefulWidget {
   const VerificationInput({Key? key}) : super(key: key);

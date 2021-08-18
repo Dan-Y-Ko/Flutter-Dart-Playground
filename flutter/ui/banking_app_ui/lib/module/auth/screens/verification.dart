@@ -1,10 +1,11 @@
-import 'package:banking_app_ui/core/utils/theme/theme.dart';
-import 'package:banking_app_ui/core/widgets/gradient-button.dart';
-import 'package:banking_app_ui/core/widgets/header.dart';
-import 'package:banking_app_ui/core/widgets/verification-input.dart';
-import 'package:banking_app_ui/module/auth/screens/reset-password.dart';
-import 'package:banking_app_ui/module/auth/widgets/instruction-text.dart';
 import 'package:flutter/material.dart';
+
+import '../../../core/utils/theme/theme.dart';
+import '../../../core/widgets/gradient-button.dart';
+import '../../../core/widgets/header.dart';
+import '../../../core/widgets/verification-input.dart';
+import '../widgets/instruction-text.dart';
+import 'reset-password.dart';
 
 class Verification extends StatelessWidget {
   const Verification({Key? key}) : super(key: key);

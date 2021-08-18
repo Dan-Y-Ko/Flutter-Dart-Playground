@@ -1,5 +1,6 @@
-import 'package:banking_app_ui/core/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
+
+import '../../../core/utils/theme/theme.dart';
 
 class InstructionText extends StatelessWidget {
   const InstructionText({

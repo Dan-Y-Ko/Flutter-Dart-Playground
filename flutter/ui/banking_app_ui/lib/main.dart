@@ -1,11 +1,11 @@
-import 'package:banking_app_ui/module/auth/screens/forgot-password.dart';
-import 'package:banking_app_ui/module/auth/screens/reset-password.dart';
-import 'package:banking_app_ui/module/auth/screens/verification.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'module/auth/screens/auth-screen.dart';
+import 'module/auth/screens/forgot-password.dart';
 import 'module/auth/screens/index.dart';
+import 'module/auth/screens/reset-password.dart';
+import 'module/auth/screens/verification.dart';
 import 'module/home/screens/home.dart';
 import 'module/onboarding/screens/onboarding-screen.dart';
 

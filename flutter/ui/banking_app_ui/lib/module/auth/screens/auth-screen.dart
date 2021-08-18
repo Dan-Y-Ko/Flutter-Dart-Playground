@@ -1,5 +1,3 @@
-import 'package:banking_app_ui/core/widgets/header.dart';
-import 'package:banking_app_ui/module/auth/screens/forgot-password.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,8 +5,10 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../core/utils/theme/theme.dart';
 import '../../../core/widgets/button.dart';
 import '../../../core/widgets/gradient-button.dart';
+import '../../../core/widgets/header.dart';
 import '../../../core/widgets/input.dart';
 import '../../home/screens/home.dart';
+import 'forgot-password.dart';
 import 'index.dart';
 
 class AuthScreen extends StatelessWidget {
