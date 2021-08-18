@@ -42,7 +42,8 @@ class _MainFlowState extends State<MainFlow> {
         body: _screens[_selectedIndex],
         bottomNavigationBar: Theme(
           data: ThemeData().copyWith(
-            splashColor: AppTheme().secondaryUI,
+            highlightColor: AppTheme().secondaryUI,
+            splashColor: AppTheme().secondaryBackground,
           ),
           child: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
