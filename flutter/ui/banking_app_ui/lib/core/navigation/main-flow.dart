@@ -1,8 +1,8 @@
-import 'package:banking_app_ui/module/payment/screens/payment.dart';
-import 'package:banking_app_ui/module/profile/screens/profile.dart';
 import 'package:flutter/material.dart';
 
 import '../../module/home/screens/home.dart';
+import '../../module/payment/screens/payment.dart';
+import '../../module/profile/screens/profile.dart';
 import '../../module/statistic/screens/statistic.dart';
 import '../utils/theme/theme.dart';
 
