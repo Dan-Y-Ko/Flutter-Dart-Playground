@@ -1,7 +1,7 @@
-import 'package:banking_app_ui/core/widgets/credit-card.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/utils/theme/theme.dart';
+import '../../../core/widgets/credit-card.dart';
 import '../../../core/widgets/header.dart';
 
 class HomeScreen extends StatelessWidget {
