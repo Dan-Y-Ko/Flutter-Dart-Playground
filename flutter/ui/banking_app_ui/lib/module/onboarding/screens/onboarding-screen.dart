@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../../core/utils/theme/theme.dart';
+import '../../../core/widgets/custom_indicator.dart';
 import '../../auth/screens/index.dart';
 import '../models/screen-data.dart';
 import '../widgets/progress-indicator-button.dart';
@@ -14,7 +15,7 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  int index = 0;
+  int _index = 0;
 
   @override
   void initState() {
@@ -32,8 +33,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   handlePress() {
     setState(() {
-      if (index < 2) {
-        index++;
+      if (_index < 2) {
+        _index++;
       } else {
         Navigator.of(context).pushNamed(SignInAndSignUpScreen.routeName);
       }
@@ -54,12 +55,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               child: Container(
                 width: 302.0,
                 height: 282.0,
-                child: Image.asset(screenData[index].image),
+                child: Image.asset(screenData[_index].image),
               ),
             ),
             SizedBox(height: 79.0),
             Text(
-              screenData[index].headline,
+              screenData[_index].headline,
               style: TextStyle(
                 fontWeight: AppTheme().fontWeights[2],
                 fontSize: AppTheme().fontSizes[10],
@@ -72,7 +73,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             SizedBox(
               width: 302.0,
               child: Text(
-                screenData[index].description,
+                screenData[_index].description,
                 style: TextStyle(
                   fontWeight: AppTheme().fontWeights[1],
                   fontSize: AppTheme().fontSizes[6],
@@ -88,38 +89,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Row(
-                  children: [
-                    for (var i = 0; i < screenData.length; i++)
-                      i != index
-                          ? Container(
-                              width: 11.0,
-                              height: 6.0,
-                              margin: EdgeInsets.only(right: 4.0),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5.0),
-                                color: AppTheme().quaternaryUI,
-                              ),
-                            )
-                          : Container(
-                              width: 20.0,
-                              height: 7.0,
-                              margin: EdgeInsets.only(right: 4.0),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5.0),
-                                gradient: LinearGradient(
-                                  colors: [
-                                    AppTheme().primaryUI!,
-                                    AppTheme().secondaryUI!,
-                                  ],
-                                ),
-                              ),
-                            ),
-                  ],
+                CustomIndicator(
+                  index: _index,
+                  data: screenData,
                 ),
                 ProgressIndicatorButton(
-                  progress: screenData[index].progress,
-                  startAngle: screenData[index].startAngle,
+                  progress: screenData[_index].progress,
+                  startAngle: screenData[_index].startAngle,
                   onTap: handlePress,
                 ),
               ],
