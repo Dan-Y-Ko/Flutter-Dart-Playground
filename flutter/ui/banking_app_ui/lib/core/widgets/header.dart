@@ -7,10 +7,12 @@ class Header extends StatelessWidget {
     Key? key,
     required this.leadingIcon,
     required this.appBarText,
+    this.suffixIcon,
   }) : super(key: key);
 
   final Widget leadingIcon;
   final String appBarText;
+  final Widget? suffixIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +32,7 @@ class Header extends StatelessWidget {
           ),
         ),
         Spacer(),
+        suffixIcon ?? Spacer(),
       ],
     );
   }
