@@ -6,14 +6,12 @@ import '../../../core/widgets/button.dart';
 import 'auth-screen.dart';
 
 class ScreenArguments {
-  final String appBarText;
   final String title;
   final String buttonText;
   final String subText;
   final bool isSignupScreen;
 
   const ScreenArguments({
-    required this.appBarText,
     required this.title,
     required this.buttonText,
     required this.subText,
@@ -44,7 +42,6 @@ class _SignInAndSignUpScreenState extends State<SignInAndSignUpScreen> {
       Navigator.of(context).pushNamed(
         AuthScreen.routeName,
         arguments: ScreenArguments(
-            appBarText: "Let's Sign In",
             title: 'Welcome Back!',
             buttonText: 'Sign In',
             subText: 'Don’t have an account? ',
@@ -56,7 +53,6 @@ class _SignInAndSignUpScreenState extends State<SignInAndSignUpScreen> {
       Navigator.of(context).pushNamed(
         AuthScreen.routeName,
         arguments: ScreenArguments(
-          appBarText: "Let’s Sign Up",
           title: 'Create Account!',
           buttonText: 'Sign Up',
           subText: 'Already have an account? ',

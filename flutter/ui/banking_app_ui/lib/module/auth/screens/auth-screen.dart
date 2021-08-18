@@ -1,3 +1,5 @@
+import 'package:banking_app_ui/core/widgets/header.dart';
+import 'package:banking_app_ui/module/auth/screens/forgot-password.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,7 +9,6 @@ import '../../../core/widgets/button.dart';
 import '../../../core/widgets/gradient-button.dart';
 import '../../../core/widgets/input.dart';
 import '../../home/screens/home.dart';
-import '../widgets/back-arrow-widget.dart';
 import 'index.dart';
 
 class AuthScreen extends StatelessWidget {
@@ -40,24 +41,11 @@ class AuthScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    BackArrowButton(),
-                    SizedBox(
-                      width: 63.0,
-                    ),
-                    Text(
-                      args.appBarText,
-                      style: TextStyle(
-                        color: AppTheme().primaryText,
-                        fontWeight: AppTheme().fontWeights[2],
-                        fontSize: AppTheme().fontSizes[8],
+                args.isSignupScreen
+                    ? Header(appBarText: "Let's Sign Up")
+                    : Header(
+                        appBarText: "Let's Sign In",
                       ),
-                    ),
-                    Spacer(),
-                  ],
-                ),
                 SizedBox(
                   height: 49.0,
                 ),
@@ -147,8 +135,28 @@ class AuthScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+                !args.isSignupScreen
+                    ? TextButton(
+                        style: TextButton.styleFrom(
+                          primary: AppTheme().primaryText,
+                          textStyle: TextStyle(
+                            fontWeight: AppTheme().fontWeights[2],
+                            fontSize: AppTheme().fontSizes[4],
+                          ),
+                        ),
+                        child: Text(
+                          'Forgot Password',
+                        ),
+                        onPressed: () {
+                          Navigator.of(context)
+                              .pushNamed(ForgotPassword.routeName);
+                        },
+                      )
+                    : SizedBox(
+                        height: 0.0,
+                      ),
                 SizedBox(
-                  height: 89.0,
+                  height: 60.0,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

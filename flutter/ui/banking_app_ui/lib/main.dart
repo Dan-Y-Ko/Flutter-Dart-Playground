@@ -1,3 +1,4 @@
+import 'package:banking_app_ui/module/auth/screens/forgot-password.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         SignInAndSignUpScreen.routeName: (_) => SignInAndSignUpScreen(),
         AuthScreen.routeName: (_) => AuthScreen(),
         HomeScreen.routeName: (_) => HomeScreen(),
+        ForgotPassword.routeName: (_) => ForgotPassword(),
       },
     );
   }
