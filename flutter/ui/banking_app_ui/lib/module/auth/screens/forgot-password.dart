@@ -2,7 +2,7 @@ import 'package:banking_app_ui/core/utils/theme/theme.dart';
 import 'package:banking_app_ui/core/widgets/gradient-button.dart';
 import 'package:banking_app_ui/core/widgets/header.dart';
 import 'package:banking_app_ui/core/widgets/input.dart';
-import 'package:banking_app_ui/module/auth/widgets/back-arrow-widget.dart';
+import 'package:banking_app_ui/module/auth/screens/verification.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPassword extends StatelessWidget {
@@ -52,7 +52,9 @@ class ForgotPassword extends StatelessWidget {
                 GradientButton(
                   text: 'Send Code',
                   padding: EdgeInsets.zero,
-                  onPress: (context, id) {},
+                  onPress: (context, id) {
+                    Navigator.of(context).pushNamed(Verification.routeName);
+                  },
                   colors: [
                     AppTheme().primaryUI!,
                     AppTheme().secondaryUI!,
