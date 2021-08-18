@@ -51,16 +51,12 @@ class Verification extends StatelessWidget {
                   height: 94.0,
                 ),
                 GradientButton(
-                  text: 'Send Code',
+                  text: 'Confirm',
                   padding: EdgeInsets.zero,
                   onPress: (context, id) {
                     Navigator.of(context).pushNamed(ResetPassword.routeName);
                   },
-                  colors: [
-                    AppTheme().primaryUI!,
-                    AppTheme().secondaryUI!,
-                  ],
-                )
+                ),
               ],
             ),
           ),

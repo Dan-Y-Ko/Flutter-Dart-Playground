@@ -1,6 +1,8 @@
 import 'package:banking_app_ui/core/utils/theme/theme.dart';
+import 'package:banking_app_ui/core/widgets/gradient-button.dart';
 import 'package:banking_app_ui/core/widgets/header.dart';
 import 'package:banking_app_ui/core/widgets/input.dart';
+import 'package:banking_app_ui/module/auth/screens/index.dart';
 import 'package:banking_app_ui/module/auth/widgets/instruction-text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -46,6 +48,14 @@ class ResetPassword extends StatelessWidget {
                 ),
                 SizedBox(
                   height: 55.0,
+                ),
+                GradientButton(
+                  text: 'Confirm',
+                  padding: EdgeInsets.zero,
+                  onPress: (context, id) {
+                    Navigator.of(context)
+                        .pushNamed(SignInAndSignUpScreen.routeName);
+                  },
                 ),
               ],
             ),
