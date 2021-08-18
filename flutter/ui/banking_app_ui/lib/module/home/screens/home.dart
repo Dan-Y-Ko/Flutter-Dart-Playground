@@ -64,9 +64,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       _currentPage = index;
                     });
                   },
+                  controller:
+                      PageController(initialPage: 0, viewportFraction: 0.9),
                   itemBuilder: (BuildContext context, int index) {
                     return Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 25.0),
+                      padding: EdgeInsets.only(right: 15.0),
                       child: CreditCard(),
                     );
                   },
