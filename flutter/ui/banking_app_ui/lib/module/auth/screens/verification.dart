@@ -44,7 +44,21 @@ class Verification extends StatelessWidget {
                 ),
                 VerificationInput(),
                 SizedBox(
-                  height: 128,
+                  height: 6.0,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 6.0),
+                  child: Text(
+                    'Resend Code',
+                    textAlign: TextAlign.right,
+                    style: TextStyle(
+                        color: AppTheme().secondaryText,
+                        fontWeight: AppTheme().fontWeights[1],
+                        fontSize: AppTheme().fontSizes[7]),
+                  ),
+                ),
+                SizedBox(
+                  height: 94.0,
                 ),
                 GradientButton(
                   text: 'Send Code',
