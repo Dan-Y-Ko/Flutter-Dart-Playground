@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../../core/utils/theme/theme.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class Statistic extends StatelessWidget {
+  const Statistic({Key? key}) : super(key: key);
 
-  static const routeName = '/home';
+  // static const routeName = '/home';
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: AppTheme().primaryBackground,
       body: Center(
         child: Text(
-          'Home Screen',
+          'Statistic Screen',
           style: TextStyle(
             color: AppTheme().primaryText,
           ),

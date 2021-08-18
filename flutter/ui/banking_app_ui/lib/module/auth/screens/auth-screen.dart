@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../../core/navigation/main-flow.dart';
 import '../../../core/utils/theme/theme.dart';
 import '../../../core/widgets/button.dart';
 import '../../../core/widgets/gradient-button.dart';
 import '../../../core/widgets/header.dart';
 import '../../../core/widgets/input.dart';
-import '../../home/screens/home.dart';
+import '../widgets/back-arrow-widget.dart';
 import 'forgot-password.dart';
 import 'index.dart';
 
@@ -24,7 +25,7 @@ class AuthScreen extends StatelessWidget {
 
   void navigateToNextScreen(BuildContext context, int id) {
     if (id == 0) {
-      Navigator.of(context).pushNamed(HomeScreen.routeName);
+      Navigator.of(context).pushNamed(MainFlow.routeName);
     }
   }
 
@@ -42,8 +43,11 @@ class AuthScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 args.isSignupScreen
-                    ? Header(appBarText: "Let's Sign Up")
+                    ? Header(
+                        leadingIcon: BackArrowButton(),
+                        appBarText: "Let's Sign Up")
                     : Header(
+                        leadingIcon: BackArrowButton(),
                         appBarText: "Let's Sign In",
                       ),
                 SizedBox(

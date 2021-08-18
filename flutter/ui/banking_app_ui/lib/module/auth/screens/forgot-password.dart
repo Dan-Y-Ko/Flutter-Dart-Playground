@@ -1,3 +1,4 @@
+import '../widgets/back-arrow-widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/utils/theme/theme.dart';
@@ -24,6 +25,7 @@ class ForgotPassword extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Header(
+                  leadingIcon: BackArrowButton(),
                   appBarText: 'Forgot Password',
                 ),
                 SizedBox(

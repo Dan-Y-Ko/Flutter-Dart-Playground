@@ -1,3 +1,4 @@
+import '../widgets/back-arrow-widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -25,6 +26,7 @@ class ResetPassword extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 Header(
+                  leadingIcon: BackArrowButton(),
                   appBarText: 'Reset Password',
                 ),
                 SizedBox(

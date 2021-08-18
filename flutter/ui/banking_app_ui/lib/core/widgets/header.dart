@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
-import '../../module/auth/widgets/back-arrow-widget.dart';
 import '../utils/theme/theme.dart';
 
 class Header extends StatelessWidget {
   const Header({
     Key? key,
+    required this.leadingIcon,
     required this.appBarText,
   }) : super(key: key);
 
+  final Widget leadingIcon;
   final String appBarText;
 
   @override
@@ -16,7 +17,7 @@ class Header extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        BackArrowButton(),
+        leadingIcon,
         SizedBox(
           width: 63.0,
         ),

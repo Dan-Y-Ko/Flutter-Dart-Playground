@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'core/navigation/main-flow.dart';
 import 'module/auth/screens/auth-screen.dart';
 import 'module/auth/screens/forgot-password.dart';
 import 'module/auth/screens/index.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         ForgotPassword.routeName: (_) => ForgotPassword(),
         Verification.routeName: (_) => Verification(),
         ResetPassword.routeName: (_) => ResetPassword(),
+        MainFlow.routeName: (_) => MainFlow(),
       },
     );
   }
