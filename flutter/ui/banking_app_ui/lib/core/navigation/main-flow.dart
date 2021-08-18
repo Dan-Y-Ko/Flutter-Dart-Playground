@@ -33,64 +33,69 @@ class _MainFlowState extends State<MainFlow> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppTheme().primaryBackground,
-      body: _screens[_selectedIndex],
-      bottomNavigationBar: Theme(
-        data: ThemeData().copyWith(
-          splashColor: AppTheme().secondaryUI,
-        ),
-        child: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          backgroundColor: AppTheme().primaryBackground,
-          selectedItemColor: AppTheme().primaryText,
-          unselectedItemColor: AppTheme().secondaryText,
-          currentIndex: _selectedIndex,
-          onTap: _onItemTapped,
-          items: [
-            BottomNavigationBarItem(
-              backgroundColor: AppTheme().secondaryUI,
-              label: '',
-              tooltip: '',
-              icon: Container(
-                padding: EdgeInsets.only(top: 14.0),
-                child: ImageIcon(
-                  AssetImage('assets/images/bottom_nav_icon_1.png'),
-                  size: 48.0,
+    return WillPopScope(
+      onWillPop: () {
+        return Future.value(false);
+      },
+      child: Scaffold(
+        backgroundColor: AppTheme().primaryBackground,
+        body: _screens[_selectedIndex],
+        bottomNavigationBar: Theme(
+          data: ThemeData().copyWith(
+            splashColor: AppTheme().secondaryUI,
+          ),
+          child: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
+            backgroundColor: AppTheme().primaryBackground,
+            selectedItemColor: AppTheme().primaryText,
+            unselectedItemColor: AppTheme().secondaryText,
+            currentIndex: _selectedIndex,
+            onTap: _onItemTapped,
+            items: [
+              BottomNavigationBarItem(
+                backgroundColor: AppTheme().secondaryUI,
+                label: '',
+                tooltip: '',
+                icon: Container(
+                  padding: EdgeInsets.only(top: 14.0),
+                  child: ImageIcon(
+                    AssetImage('assets/images/bottom_nav_icon_1.png'),
+                    size: 48.0,
+                  ),
                 ),
               ),
-            ),
-            BottomNavigationBarItem(
-              label: '',
-              tooltip: '',
-              icon: Container(
-                padding: EdgeInsets.only(top: 14.0),
-                child: ImageIcon(
-                  AssetImage('assets/images/bottom_nav_icon_2.png'),
+              BottomNavigationBarItem(
+                label: '',
+                tooltip: '',
+                icon: Container(
+                  padding: EdgeInsets.only(top: 14.0),
+                  child: ImageIcon(
+                    AssetImage('assets/images/bottom_nav_icon_2.png'),
+                  ),
                 ),
               ),
-            ),
-            BottomNavigationBarItem(
-              label: '',
-              tooltip: '',
-              icon: Container(
-                padding: EdgeInsets.only(top: 14.0),
-                child: ImageIcon(
-                  AssetImage('assets/images/bottom_nav_icon_3.png'),
+              BottomNavigationBarItem(
+                label: '',
+                tooltip: '',
+                icon: Container(
+                  padding: EdgeInsets.only(top: 14.0),
+                  child: ImageIcon(
+                    AssetImage('assets/images/bottom_nav_icon_3.png'),
+                  ),
                 ),
               ),
-            ),
-            BottomNavigationBarItem(
-              label: '',
-              tooltip: '',
-              icon: Container(
-                padding: EdgeInsets.only(top: 14.0),
-                child: ImageIcon(
-                  AssetImage('assets/images/bottom_nav_icon_4.png'),
+              BottomNavigationBarItem(
+                label: '',
+                tooltip: '',
+                icon: Container(
+                  padding: EdgeInsets.only(top: 14.0),
+                  child: ImageIcon(
+                    AssetImage('assets/images/bottom_nav_icon_4.png'),
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
