@@ -53,32 +53,41 @@ class _MainFlowState extends State<MainFlow> {
               label: '',
               tooltip: '',
               icon: Container(
-                height: 48.0,
-                width: 48.0,
+                padding: EdgeInsets.only(top: 14.0),
                 child: ImageIcon(
                   AssetImage('assets/images/bottom_nav_icon_1.png'),
+                  size: 48.0,
                 ),
               ),
             ),
             BottomNavigationBarItem(
               label: '',
               tooltip: '',
-              icon: ImageIcon(
-                AssetImage('assets/images/bottom_nav_icon_2.png'),
+              icon: Container(
+                padding: EdgeInsets.only(top: 14.0),
+                child: ImageIcon(
+                  AssetImage('assets/images/bottom_nav_icon_2.png'),
+                ),
               ),
             ),
             BottomNavigationBarItem(
               label: '',
               tooltip: '',
-              icon: ImageIcon(
-                AssetImage('assets/images/bottom_nav_icon_3.png'),
+              icon: Container(
+                padding: EdgeInsets.only(top: 14.0),
+                child: ImageIcon(
+                  AssetImage('assets/images/bottom_nav_icon_3.png'),
+                ),
               ),
             ),
             BottomNavigationBarItem(
               label: '',
               tooltip: '',
-              icon: ImageIcon(
-                AssetImage('assets/images/bottom_nav_icon_4.png'),
+              icon: Container(
+                padding: EdgeInsets.only(top: 14.0),
+                child: ImageIcon(
+                  AssetImage('assets/images/bottom_nav_icon_4.png'),
+                ),
               ),
             ),
           ],
