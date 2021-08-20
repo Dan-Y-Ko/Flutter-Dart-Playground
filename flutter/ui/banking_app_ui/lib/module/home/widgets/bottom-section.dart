@@ -1,4 +1,5 @@
 import 'package:banking_app_ui/core/utils/theme/theme.dart';
+import 'package:banking_app_ui/module/home/models/incoming-transactions.dart';
 import 'package:flutter/material.dart';
 
 class BottomSection extends StatelessWidget {
@@ -44,9 +45,67 @@ class BottomSection extends StatelessWidget {
                     ),
                   ],
                 ),
-                Row(
-                  children: [],
-                )
+                SizedBox(
+                  height: 17.0,
+                ),
+                for (var i = 0; i < incomingTransactions.length; i++)
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 10.0),
+                    child: Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundImage:
+                              AssetImage(incomingTransactions[i].avatarUrl),
+                        ),
+                        SizedBox(
+                          width: 15.0,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              incomingTransactions[i].name,
+                              style: TextStyle(
+                                color: AppTheme().primaryText,
+                                fontSize: 13.0,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            Text(
+                              incomingTransactions[i].paymentType,
+                              style: TextStyle(
+                                color: AppTheme().primaryText,
+                                fontSize: 11.0,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Spacer(),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Text(
+                              incomingTransactions[i].amount,
+                              style: TextStyle(
+                                color: AppTheme().primaryText,
+                                fontSize: 13.0,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            Text(
+                              incomingTransactions[i].time,
+                              style: TextStyle(
+                                color: AppTheme().primaryText,
+                                fontSize: 11.0,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                  )
               ],
             ),
           ),
