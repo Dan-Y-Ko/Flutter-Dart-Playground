@@ -65,8 +65,8 @@ class AuthScreen extends StatelessWidget {
                       child: Text(
                         args.title,
                         style: TextStyle(
-                          fontWeight: AppTheme().fontWeights[2],
-                          fontSize: AppTheme().fontSizes[13],
+                          fontWeight: FontWeight.w500,
+                          fontSize: 30.0,
                           color: AppTheme().primaryText,
                         ),
                       ),
@@ -122,16 +122,16 @@ class AuthScreen extends StatelessWidget {
                       text: TextSpan(
                         text: args.subText,
                         style: TextStyle(
-                          fontWeight: AppTheme().fontWeights[1],
-                          fontSize: AppTheme().fontSizes[4],
+                          fontWeight: FontWeight.w400,
+                          fontSize: 13.0,
                           color: AppTheme().primaryText,
                         ),
                         children: [
                           TextSpan(
                             text: 'Sign In',
                             style: TextStyle(
-                              fontWeight: AppTheme().fontWeights[2],
-                              fontSize: AppTheme().fontSizes[4],
+                              fontWeight: FontWeight.w500,
+                              fontSize: 13.0,
                               color: AppTheme().secondaryText,
                             ),
                           ),
@@ -144,8 +144,8 @@ class AuthScreen extends StatelessWidget {
                           style: TextButton.styleFrom(
                             primary: AppTheme().primaryText,
                             textStyle: TextStyle(
-                              fontWeight: AppTheme().fontWeights[2],
-                              fontSize: AppTheme().fontSizes[4],
+                              fontWeight: FontWeight.w500,
+                              fontSize: 13.0,
                             ),
                           ),
                           child: Text(
@@ -180,8 +180,8 @@ class AuthScreen extends StatelessWidget {
                         style: TextStyle(
                           color: AppTheme().primaryText,
                           fontFamily: GoogleFonts.roboto().fontFamily,
-                          fontWeight: AppTheme().fontWeights[1],
-                          fontSize: AppTheme().fontSizes[6],
+                          fontWeight: FontWeight.w400,
+                          fontSize: 15.0,
                         ),
                       ),
                       Expanded(

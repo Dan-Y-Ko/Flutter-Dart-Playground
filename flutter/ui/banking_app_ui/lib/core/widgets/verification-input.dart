@@ -69,8 +69,8 @@ class _VerificationInputState extends State<VerificationInput> {
               ),
               style: TextStyle(
                 color: AppTheme().primaryText,
-                fontWeight: AppTheme().fontWeights[2],
-                fontSize: AppTheme().fontSizes[11],
+                fontWeight: FontWeight.w500,
+                fontSize: 27.0,
               ),
             ),
           );

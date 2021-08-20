@@ -46,8 +46,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   'Credit Card',
                   style: TextStyle(
                     color: AppTheme().primaryText,
-                    fontWeight: AppTheme().fontWeights[2],
-                    fontSize: AppTheme().fontSizes[8],
+                    fontWeight: FontWeight.w500,
+                    fontSize: 18.0,
                   ),
                 ),
               ),

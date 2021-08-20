@@ -30,8 +30,8 @@ class Input extends StatelessWidget {
           hintText: hintText,
           hintStyle: TextStyle(
             color: AppTheme().primaryText,
-            fontSize: AppTheme().fontSizes[6],
-            fontWeight: AppTheme().fontWeights[1],
+            fontSize: 15.0,
+            fontWeight: FontWeight.w400,
           ),
           border: OutlineInputBorder(
             borderRadius: borderRadius,

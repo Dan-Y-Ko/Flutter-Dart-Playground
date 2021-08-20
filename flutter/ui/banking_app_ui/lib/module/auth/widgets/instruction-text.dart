@@ -17,8 +17,8 @@ class InstructionText extends StatelessWidget {
       child: Text(
         text,
         style: TextStyle(
-          fontWeight: AppTheme().fontWeights[1],
-          fontSize: AppTheme().fontSizes[7],
+          fontWeight: FontWeight.w400,
+          fontSize: 16.0,
           color: AppTheme().primaryText,
           height: 1.7,
         ),

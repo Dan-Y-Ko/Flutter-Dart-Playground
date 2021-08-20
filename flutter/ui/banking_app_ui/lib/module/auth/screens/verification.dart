@@ -49,9 +49,10 @@ class Verification extends StatelessWidget {
                       'Resend Code',
                       textAlign: TextAlign.right,
                       style: TextStyle(
-                          color: AppTheme().secondaryText,
-                          fontWeight: AppTheme().fontWeights[1],
-                          fontSize: AppTheme().fontSizes[7]),
+                        color: AppTheme().secondaryText,
+                        fontWeight: FontWeight.w400,
+                        fontSize: 16.0,
+                      ),
                     ),
                   ),
                   SizedBox(

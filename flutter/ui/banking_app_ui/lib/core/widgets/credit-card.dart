@@ -27,8 +27,8 @@ class CreditCard extends StatelessWidget {
                   'Kawsar Ahmed',
                   style: TextStyle(
                     color: AppTheme().primaryText,
-                    fontWeight: AppTheme().fontWeights[2],
-                    fontSize: AppTheme().fontSizes[9],
+                    fontWeight: FontWeight.w500,
+                    fontSize: 20.0,
                   ),
                 ),
                 Image.asset('assets/images/circles.png'),
@@ -84,8 +84,8 @@ class CardBottomText extends StatelessWidget {
           topText,
           style: TextStyle(
             color: AppTheme().primaryText,
-            fontWeight: AppTheme().fontWeights[3],
-            fontSize: AppTheme().fontSizes[0],
+            fontWeight: FontWeight.w600,
+            fontSize: 8.0,
           ),
         ),
         SizedBox(
@@ -95,8 +95,8 @@ class CardBottomText extends StatelessWidget {
           bottomText,
           style: TextStyle(
             color: AppTheme().primaryText,
-            fontWeight: AppTheme().fontWeights[3],
-            fontSize: AppTheme().fontSizes[1],
+            fontWeight: FontWeight.w600,
+            fontSize: 10.0,
           ),
         ),
       ],

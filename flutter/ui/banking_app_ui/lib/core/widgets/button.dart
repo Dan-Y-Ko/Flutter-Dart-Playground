@@ -49,8 +49,8 @@ class CustomButton extends StatelessWidget {
             primary: AppTheme().primaryText,
             backgroundColor: backgroundColor,
             textStyle: TextStyle(
-              fontWeight: AppTheme().fontWeights[2],
-              fontSize: AppTheme().fontSizes[6],
+              fontWeight: FontWeight.w500,
+              fontSize: 15.0,
             ),
             shape: RoundedRectangleBorder(
               borderRadius: borderRadius,

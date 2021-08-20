@@ -27,8 +27,8 @@ class Header extends StatelessWidget {
           appBarText,
           style: TextStyle(
             color: AppTheme().primaryText,
-            fontWeight: AppTheme().fontWeights[2],
-            fontSize: AppTheme().fontSizes[8],
+            fontWeight: FontWeight.w500,
+            fontSize: 18.0,
           ),
         ),
         Spacer(),

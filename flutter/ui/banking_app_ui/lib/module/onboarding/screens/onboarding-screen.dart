@@ -62,8 +62,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             Text(
               screenData[_index].headline,
               style: TextStyle(
-                fontWeight: AppTheme().fontWeights[2],
-                fontSize: AppTheme().fontSizes[10],
+                fontWeight: FontWeight.w500,
+                fontSize: 25.0,
                 color: AppTheme().primaryText,
               ),
             ),
@@ -75,8 +75,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               child: Text(
                 screenData[_index].description,
                 style: TextStyle(
-                  fontWeight: AppTheme().fontWeights[1],
-                  fontSize: AppTheme().fontSizes[6],
+                  fontWeight: FontWeight.w400,
+                  fontSize: 15.0,
                   color: AppTheme().primaryText,
                   height: 1.7,
                 ),
