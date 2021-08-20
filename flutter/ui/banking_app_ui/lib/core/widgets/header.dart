@@ -20,9 +20,6 @@ class Header extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         leadingIcon,
-        SizedBox(
-          width: 63.0,
-        ),
         Text(
           appBarText,
           style: TextStyle(
@@ -31,8 +28,10 @@ class Header extends StatelessWidget {
             fontSize: 18.0,
           ),
         ),
-        Spacer(),
-        suffixIcon ?? Spacer(),
+        suffixIcon ??
+            SizedBox(
+              width: 40.0,
+            ),
       ],
     );
   }
