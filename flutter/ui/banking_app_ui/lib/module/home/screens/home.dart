@@ -1,3 +1,4 @@
+import 'package:banking_app_ui/core/widgets/credit-card-carousel.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/utils/theme/theme.dart';
@@ -54,37 +55,13 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(
                 height: 10.0,
               ),
-              SizedBox(
-                height: 194.0,
-                child: PageView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 3,
-                  onPageChanged: (index) {
-                    setState(() {
-                      _currentPage = index;
-                    });
-                  },
-                  controller:
-                      PageController(initialPage: 0, viewportFraction: 0.9),
-                  itemBuilder: (BuildContext context, int index) {
-                    return Padding(
-                      padding: EdgeInsets.only(right: 15.0),
-                      child: CreditCard(),
-                    );
-                  },
-                ),
-              ),
-              SizedBox(
-                height: 12.0,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  CustomIndicator(
-                    index: _currentPage,
-                    data: [0, 1, 2],
-                  ),
-                ],
+              CreditCardCarousel(
+                onPageChanged: (index) {
+                  setState(() {
+                    _currentPage = index;
+                  });
+                },
+                index: _currentPage,
               ),
             ],
           ),
