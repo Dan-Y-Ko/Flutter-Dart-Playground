@@ -8,6 +8,7 @@ class AppTheme {
     ThemeElement.background: {
       ThemeVariant.primary: Color(0xFF161730),
       ThemeVariant.secondary: Color(0xFF6059BD),
+      ThemeVariant.tertiary: Color(0xFF222446),
     },
     ThemeElement.ui: {
       ThemeVariant.primary: Color.fromRGBO(63, 61, 155, 1),
@@ -26,6 +27,8 @@ class AppTheme {
       _colors[ThemeElement.background]![ThemeVariant.primary];
   Color? get secondaryBackground =>
       _colors[ThemeElement.background]![ThemeVariant.secondary];
+  Color? get tertiaryBackground =>
+      _colors[ThemeElement.background]![ThemeVariant.tertiary];
   Color? get primaryUI => _colors[ThemeElement.ui]![ThemeVariant.primary];
   Color? get secondaryUI => _colors[ThemeElement.ui]![ThemeVariant.secondary];
   Color? get tertiaryUI => _colors[ThemeElement.ui]![ThemeVariant.tertiary];
