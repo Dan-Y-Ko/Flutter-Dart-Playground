@@ -17,14 +17,32 @@ class FeaturesList extends StatelessWidget {
           for (var i = 0; i < features.length; i++)
             Column(
               children: [
-                Container(
-                  width: 63.0,
-                  height: 63.0,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    color: AppTheme().tertiaryUI,
-                  ),
-                  child: Image.asset(features[i].logo),
+                Stack(
+                  children: [
+                    Container(
+                      width: 63.0,
+                      height: 63.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: AppTheme().tertiaryUI,
+                      ),
+                      child: Image.asset(features[i].logo),
+                    ),
+                    Positioned.fill(
+                      child: Material(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(
+                            10.0,
+                          ),
+                        ),
+                        clipBehavior: Clip.hardEdge,
+                        color: Colors.transparent,
+                        child: InkWell(
+                          onTap: () {},
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 SizedBox(
                   height: 7.0,
