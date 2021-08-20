@@ -1,4 +1,5 @@
 import 'package:banking_app_ui/core/widgets/credit-card-carousel.dart';
+import 'package:banking_app_ui/module/home/widgets/features-list.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/utils/theme/theme.dart';
@@ -62,6 +63,29 @@ class _HomeScreenState extends State<HomeScreen> {
                   });
                 },
                 index: _currentPage,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 25.0, vertical: 27.0),
+                child: Column(
+                  children: [
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Featured',
+                        style: TextStyle(
+                          color: AppTheme().secondaryText,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15.0,
+                    ),
+                    FeaturesList(),
+                  ],
+                ),
               ),
             ],
           ),
