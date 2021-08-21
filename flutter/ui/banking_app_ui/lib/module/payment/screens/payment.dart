@@ -3,6 +3,7 @@ import 'package:banking_app_ui/core/widgets/custom-icon-button.dart';
 import 'package:banking_app_ui/core/widgets/header.dart';
 import 'package:banking_app_ui/core/widgets/people-list.dart';
 import 'package:banking_app_ui/module/auth/widgets/back-arrow-widget.dart';
+import 'package:banking_app_ui/module/payment/widgets/recent-transactions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -115,7 +116,11 @@ class Payment extends StatelessWidget {
                           ),
                         )
                       ],
-                    )
+                    ),
+                    SizedBox(
+                      height: 12.0,
+                    ),
+                    RecentTransactions(),
                   ],
                 ),
               ),
