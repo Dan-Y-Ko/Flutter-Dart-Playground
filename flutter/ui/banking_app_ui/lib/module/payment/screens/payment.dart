@@ -1,8 +1,10 @@
 import 'package:banking_app_ui/core/widgets/credit-card-carousel.dart';
+import 'package:banking_app_ui/core/widgets/custom-icon-button.dart';
 import 'package:banking_app_ui/core/widgets/header.dart';
 import 'package:banking_app_ui/core/widgets/people-list.dart';
 import 'package:banking_app_ui/module/auth/widgets/back-arrow-widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../core/utils/theme/theme.dart';
 
@@ -88,6 +90,32 @@ class Payment extends StatelessWidget {
                       height: 15.0,
                     ),
                     PeopleList(people: _people),
+                    SizedBox(
+                      height: 18.0,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Recent Transactions',
+                          style: TextStyle(
+                            color: AppTheme().primaryText,
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        CustomIconButton(
+                          height: 30.0,
+                          width: 30.0,
+                          color: AppTheme().tertiaryUI,
+                          borderRadius: BorderRadius.circular(6.0),
+                          padding: EdgeInsets.all(8.0),
+                          asset: SvgPicture.asset(
+                            'assets/images/arrow_right.svg',
+                          ),
+                        )
+                      ],
+                    )
                   ],
                 ),
               ),
