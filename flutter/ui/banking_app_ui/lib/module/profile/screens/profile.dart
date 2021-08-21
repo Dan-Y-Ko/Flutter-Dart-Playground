@@ -1,3 +1,5 @@
+import 'package:banking_app_ui/core/widgets/header.dart';
+import 'package:banking_app_ui/module/auth/widgets/back-arrow-widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/utils/theme/theme.dart';
@@ -11,11 +13,18 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppTheme().primaryBackground,
-      body: Center(
-        child: Text(
-          'Profile Screen',
-          style: TextStyle(
-            color: AppTheme().primaryText,
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: Column(
+              children: [
+                Header(
+                  leadingIcon: BackArrowButton(),
+                  appBarText: 'Profile',
+                )
+              ],
+            ),
           ),
         ),
       ),
