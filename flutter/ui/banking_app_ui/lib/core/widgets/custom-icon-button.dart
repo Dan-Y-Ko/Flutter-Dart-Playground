@@ -11,6 +11,7 @@ class CustomIconButton extends StatelessWidget {
     required this.padding,
     this.onTap,
     required this.asset,
+    this.inkwellRadius,
   }) : super(key: key);
 
   final Color? color;
@@ -21,6 +22,7 @@ class CustomIconButton extends StatelessWidget {
   final EdgeInsetsGeometry padding;
   final void Function()? onTap;
   final Widget asset;
+  final BorderRadiusGeometry? inkwellRadius;
 
   @override
   Widget build(BuildContext context) {
@@ -41,11 +43,12 @@ class CustomIconButton extends StatelessWidget {
         ),
         Positioned.fill(
           child: Material(
-            borderRadius: BorderRadius.all(
-              Radius.circular(
-                50.0,
-              ),
-            ),
+            borderRadius: inkwellRadius ??
+                BorderRadius.all(
+                  Radius.circular(
+                    50.0,
+                  ),
+                ),
             clipBehavior: Clip.hardEdge,
             color: Colors.transparent,
             child: InkWell(

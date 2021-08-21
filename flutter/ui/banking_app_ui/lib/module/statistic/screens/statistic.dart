@@ -1,6 +1,7 @@
 import 'package:banking_app_ui/core/widgets/header.dart';
 import 'package:banking_app_ui/module/auth/widgets/back-arrow-widget.dart';
 import 'package:banking_app_ui/module/statistic/widgets/chart.dart';
+import 'package:banking_app_ui/module/statistic/widgets/overview.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/utils/theme/theme.dart';
@@ -80,7 +81,8 @@ class Statistic extends StatelessWidget {
                       ),
                   ],
                 ),
-              )
+              ),
+              Overview(),
             ],
           ),
         ),
