@@ -11,11 +11,10 @@ class Payment extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppTheme().primaryBackground,
-      body: Center(
-        child: Text(
-          'Pyament Screen',
-          style: TextStyle(
-            color: AppTheme().primaryText,
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            children: [],
           ),
         ),
       ),

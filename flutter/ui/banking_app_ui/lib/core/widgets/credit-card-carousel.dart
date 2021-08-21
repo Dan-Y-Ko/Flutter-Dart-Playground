@@ -3,15 +3,17 @@ import 'package:flutter/material.dart';
 import 'credit-card.dart';
 import 'custom_indicator.dart';
 
-class CreditCardCarousel extends StatelessWidget {
+class CreditCardCarousel extends StatefulWidget {
   const CreditCardCarousel({
     Key? key,
-    this.onPageChanged,
-    required this.index,
   }) : super(key: key);
 
-  final void Function(int)? onPageChanged;
-  final int index;
+  @override
+  _CreditCardCarouselState createState() => _CreditCardCarouselState();
+}
+
+class _CreditCardCarouselState extends State<CreditCardCarousel> {
+  var currentPage = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,11 @@ class CreditCardCarousel extends StatelessWidget {
           child: PageView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: 3,
-            onPageChanged: onPageChanged,
+            onPageChanged: (index) {
+              setState(() {
+                currentPage = index;
+              });
+            },
             controller: PageController(initialPage: 0, viewportFraction: 0.9),
             itemBuilder: (BuildContext context, int index) {
               return Padding(
@@ -39,7 +45,7 @@ class CreditCardCarousel extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CustomIndicator(
-              index: index,
+              index: currentPage,
               data: [0, 1, 2],
             ),
           ],

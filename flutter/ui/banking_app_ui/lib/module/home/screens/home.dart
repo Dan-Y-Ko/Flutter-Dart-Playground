@@ -4,21 +4,12 @@ import 'package:banking_app_ui/module/home/widgets/features-list.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/utils/theme/theme.dart';
-import '../../../core/widgets/credit-card.dart';
-import '../../../core/widgets/custom_indicator.dart';
 import '../../../core/widgets/header.dart';
 
-class HomeScreen extends StatefulWidget {
+class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   static const routeName = '/home';
-
-  @override
-  _HomeScreenState createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  var _currentPage = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -55,14 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: 10.0,
             ),
-            CreditCardCarousel(
-              onPageChanged: (index) {
-                setState(() {
-                  _currentPage = index;
-                });
-              },
-              index: _currentPage,
-            ),
+            CreditCardCarousel(),
             Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 25.0, vertical: 27.0),
