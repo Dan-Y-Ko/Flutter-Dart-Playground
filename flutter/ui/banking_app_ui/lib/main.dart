@@ -10,6 +10,7 @@ import 'module/auth/screens/reset-password.dart';
 import 'module/auth/screens/verification.dart';
 import 'module/home/screens/home.dart';
 import 'module/home/screens/notification.dart';
+import 'module/home/screens/top-up.dart';
 import 'module/onboarding/screens/onboarding-screen.dart';
 
 void main() {
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         AuthScreen.routeName: (_) => AuthScreen(),
         HomeScreen.routeName: (_) => HomeScreen(),
         NotificationScreen.routeName: (_) => NotificationScreen(),
+        TopUpScreen.routeName: (_) => TopUpScreen(),
         ForgotPassword.routeName: (_) => ForgotPassword(),
         Verification.routeName: (_) => Verification(),
         ResetPassword.routeName: (_) => ResetPassword(),

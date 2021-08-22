@@ -1,11 +1,16 @@
 import 'package:banking_app_ui/core/utils/theme/theme.dart';
 import 'package:banking_app_ui/module/home/models/features.dart';
+import 'package:banking_app_ui/module/home/screens/top-up.dart';
 import 'package:flutter/material.dart';
 
 class FeaturesList extends StatelessWidget {
   const FeaturesList({
     Key? key,
   }) : super(key: key);
+
+  static const route = [
+    TopUpScreen.routeName,
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +43,9 @@ class FeaturesList extends StatelessWidget {
                         clipBehavior: Clip.hardEdge,
                         color: Colors.transparent,
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.of(context).pushNamed(route[i]);
+                          },
                         ),
                       ),
                     ),

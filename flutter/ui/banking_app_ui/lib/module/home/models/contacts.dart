@@ -17,13 +17,23 @@ const List<Contacts> contactsList = [
     phoneNumber: 415829639069,
   ),
   Contacts(
-    name: 'Mahbuba Islam',
+    name: 'Rumpa',
     avatarUrl: 'assets/images/avatar_3.png',
+    phoneNumber: 415829639069,
+  ),
+  Contacts(
+    name: 'Mahbuba Islam',
+    avatarUrl: 'assets/images/avatar_6.png',
     phoneNumber: 415829639069,
   ),
   Contacts(
     name: 'Riyadh',
     avatarUrl: 'assets/images/avatar_4.png',
+    phoneNumber: 415829639069,
+  ),
+  Contacts(
+    name: 'Monir',
+    avatarUrl: 'assets/images/avatar_8.png',
     phoneNumber: 415829639069,
   ),
 ];
