@@ -90,7 +90,16 @@ class Payment extends StatelessWidget {
                     SizedBox(
                       height: 15.0,
                     ),
-                    PeopleList(people: _people),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        for (Map<String, String> person in _people)
+                          PeopleList(
+                            avatarUrl: person['avatarUrl']!,
+                            name: person['name']!,
+                          ),
+                      ],
+                    ),
                     SizedBox(
                       height: 18.0,
                     ),
