@@ -33,8 +33,13 @@ class PeopleList extends StatelessWidget {
                       ],
                     )
                   : null,
+              image: DecorationImage(
+                image: AssetImage(
+                  avatarUrl,
+                ),
+                fit: BoxFit.cover,
+              ),
             ),
-            child: Image.asset(avatarUrl),
           ),
           SizedBox(
             height: 4.0,
