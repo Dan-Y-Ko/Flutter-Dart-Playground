@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'dart:ui' as UI;
 
+import 'package:banking_app_ui/core/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -91,7 +92,17 @@ class SliderThumbImage extends SliderComponentShape {
     );
 
     final paintContainer = Paint()
-      ..color = Colors.purple //Thumb Background Color
+      ..shader = LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [
+          AppTheme().secondaryText!,
+          AppTheme().primaryUI!,
+        ],
+      ).createShader(Rect.fromCircle(
+        center: center,
+        radius: containerHeight / 2,
+      ))
       ..style = PaintingStyle.fill;
 
     canvas.drawRRect(rRect, paintContainer);
