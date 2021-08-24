@@ -1,18 +1,22 @@
 import 'package:banking_app_ui/core/utils/theme/theme.dart';
+import 'package:banking_app_ui/core/widgets/button.dart';
 import 'package:banking_app_ui/core/widgets/custom-icon-button.dart';
+import 'package:banking_app_ui/core/widgets/gradient-button.dart';
 import 'package:flutter/material.dart';
 
 import 'custom-slider.dart';
 
-class TopupInput extends StatefulWidget {
-  const TopupInput({Key? key}) : super(key: key);
-
-  @override
-  _TopupInputState createState() => _TopupInputState();
-}
-
-class _TopupInputState extends State<TopupInput> {
-  var slider_value = 0.0;
+class TopupInput extends StatelessWidget {
+  static const List<String> priceList = [
+    '\$5',
+    '\$10',
+    '\$20',
+    '\$30',
+    '\$50',
+    '\$100',
+    '\$200',
+    '\$500',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +24,25 @@ class _TopupInputState extends State<TopupInput> {
       height: 501.0,
       child: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(25.0, 33.0, 24.0, 22.0),
+          padding: const EdgeInsets.fromLTRB(25.0, 10.0, 24.0, 22.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(bottom: 18.0),
+                    width: 42.0,
+                    height: 5.0,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadiusDirectional.circular(5.0),
+                      color: AppTheme().primaryText,
+                    ),
+                  ),
+                ],
+              ),
               Text(
                 'Amount',
                 style: TextStyle(
@@ -76,6 +95,73 @@ class _TopupInputState extends State<TopupInput> {
                 height: 27.0,
               ),
               CustomSlider(),
+              SizedBox(
+                height: 31.0,
+              ),
+              SizedBox(
+                height: 165.0,
+                child: GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 4,
+                    mainAxisSpacing: 16.0,
+                    crossAxisSpacing: 18.0,
+                  ),
+                  itemCount: priceList.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Container(
+                      width: 68.0,
+                      height: 68.0,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10.0),
+                          color: AppTheme().primaryBackground,
+                          gradient: index == priceList.length - 1
+                              ? RadialGradient(
+                                  colors: [
+                                    AppTheme().secondaryUI!,
+                                    AppTheme().primaryUI!,
+                                  ],
+                                )
+                              : null),
+                      child: Center(
+                        child: Text(
+                          '${priceList[index]}',
+                          style: TextStyle(
+                            color: AppTheme().primaryText,
+                            fontSize: 15.0,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Row(
+                children: [
+                  CustomButton(
+                    text: 'Cancel',
+                    borderRadius: BorderRadius.circular(10.0),
+                    backgroundColor: AppTheme().primaryBackground!,
+                    padding: EdgeInsets.zero,
+                    onPress: (context, id) {},
+                    width: 107.0,
+                    height: 52.0,
+                  ),
+                  SizedBox(
+                    width: 19.0,
+                  ),
+                  Expanded(
+                    child: GradientButton(
+                      text: 'Confirm',
+                      padding: EdgeInsets.zero,
+                      onPress: (context, id) {},
+                    ),
+                  )
+                ],
+              )
             ],
           ),
         ),

@@ -13,6 +13,7 @@ class CustomButton extends StatelessWidget {
     this.borderColor,
     required this.onPress,
     this.icon,
+    this.width,
     required this.height,
   }) : super(key: key);
 
@@ -23,6 +24,7 @@ class CustomButton extends StatelessWidget {
   final Color? borderColor;
   final void Function(BuildContext, int?) onPress;
   final SvgPicture? icon;
+  final double? width;
   final double height;
 
   @override
@@ -30,16 +32,18 @@ class CustomButton extends StatelessWidget {
     return Padding(
       padding: padding,
       child: Container(
+        width: width,
         height: height,
         child: TextButton(
           onPressed: () => onPress(context, 0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                margin: EdgeInsets.all(5.0),
-                child: icon,
-              ),
+              if (icon != null)
+                Container(
+                  margin: EdgeInsets.all(5.0),
+                  child: icon,
+                ),
               Text(
                 text,
               ),

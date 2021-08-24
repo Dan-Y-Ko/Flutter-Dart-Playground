@@ -41,8 +41,7 @@ class _CustomSliderState extends State<CustomSlider> {
                   colors: [AppTheme().secondaryUI!, AppTheme().primaryUI!],
                 ),
               ),
-              overlayColor: Colors.transparent,
-              overlayShape: RoundSliderOverlayShape(overlayRadius: 0.0),
+              overlayShape: SliderComponentShape.noOverlay,
             ),
             child: Slider(
               value: sliderValue,
@@ -164,21 +163,12 @@ class CustomTrackShape extends RoundedRectSliderTrackShape {
 
     // Assign the track segment paints, which are left: active, right: inactive,
     // but reversed for right to left text.
-    final ColorTween activeTrackColorTween = ColorTween(
-        begin: sliderTheme.disabledActiveTrackColor,
-        end: sliderTheme.activeTrackColor);
-
-    final ColorTween inactiveTrackColorTween = ColorTween(
-      begin: AppTheme().primaryBackground,
-      end: AppTheme().primaryBackground,
-    );
 
     final Paint activePaint = Paint()
-      ..shader = gradient.createShader(trackRect)
-      ..color = activeTrackColorTween.evaluate(enableAnimation)!;
+      ..shader = gradient.createShader(trackRect);
+    // ..color = activeTrackColorTween.evaluate(enableAnimation)!;
 
-    final Paint inactivePaint = Paint()
-      ..color = inactiveTrackColorTween.evaluate(enableAnimation)!;
+    final Paint inactivePaint = Paint()..color = AppTheme().primaryBackground!;
 
     final Paint leftTrackPaint;
     final Paint rightTrackPaint;
