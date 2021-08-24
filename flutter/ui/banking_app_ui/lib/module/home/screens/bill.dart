@@ -33,6 +33,20 @@ class BillScreen extends StatelessWidget {
                 prefixIcon: Icon(Icons.search, color: AppTheme().primaryText),
                 suffixIcon: SearchButton(),
               ),
+              SizedBox(
+                height: 29.0,
+              ),
+              Text(
+                'Bill Type',
+                style: TextStyle(
+                  color: AppTheme().secondaryText,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              SizedBox(
+                height: 15.0,
+              ),
             ],
           ),
         ),
