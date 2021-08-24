@@ -1,3 +1,4 @@
+import 'package:banking_app_ui/module/home/screens/bill.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
         HomeScreen.routeName: (_) => HomeScreen(),
         NotificationScreen.routeName: (_) => NotificationScreen(),
         TopUpScreen.routeName: (_) => TopUpScreen(),
+        BillScreen.routeName: (_) => BillScreen(),
         ForgotPassword.routeName: (_) => ForgotPassword(),
         Verification.routeName: (_) => Verification(),
         ResetPassword.routeName: (_) => ResetPassword(),

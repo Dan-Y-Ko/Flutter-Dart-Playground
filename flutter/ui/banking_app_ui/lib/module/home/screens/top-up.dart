@@ -10,7 +10,7 @@ import 'package:banking_app_ui/module/home/models/contacts.dart';
 class TopUpScreen extends StatelessWidget {
   const TopUpScreen({Key? key}) : super(key: key);
 
-  static const routeName = 'topup';
+  static const routeName = '/topup';
 
   @override
   Widget build(BuildContext context) {
