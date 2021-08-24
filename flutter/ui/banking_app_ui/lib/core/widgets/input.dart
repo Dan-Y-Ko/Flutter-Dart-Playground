@@ -13,7 +13,7 @@ class Input extends StatelessWidget {
 
   final String hintText;
   final BorderRadius borderRadius;
-  final SvgPicture? suffixIcon;
+  final Widget? suffixIcon;
 
   @override
   Widget build(BuildContext context) {

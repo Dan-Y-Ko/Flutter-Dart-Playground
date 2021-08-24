@@ -1,3 +1,6 @@
+import 'package:banking_app_ui/core/utils/theme/theme.dart';
+import 'package:banking_app_ui/core/widgets/header.dart';
+import 'package:banking_app_ui/module/auth/widgets/back-arrow-widget.dart';
 import 'package:flutter/material.dart';
 
 class BillScreen extends StatelessWidget {
@@ -8,7 +11,21 @@ class BillScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Hello'),
+      backgroundColor: AppTheme().primaryBackground,
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.fromLTRB(25.0, 0.0, 25.0, 5.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Header(
+                leadingIcon: BackArrowButton(),
+                appBarText: 'Bill',
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

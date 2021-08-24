@@ -98,7 +98,9 @@ class AuthScreen extends StatelessWidget {
                   Input(
                     hintText: 'Password',
                     borderRadius: BorderRadius.circular(10.0),
-                    suffixIcon: SvgPicture.asset('assets/images/some_icon.svg'),
+                    suffixIcon: SizedBox(
+                      child: SvgPicture.asset('assets/images/some_icon.svg'),
+                    ),
                   ),
                   args.isSignupScreen
                       ? SizedBox(
