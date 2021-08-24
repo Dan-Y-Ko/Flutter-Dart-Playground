@@ -3,6 +3,7 @@ import 'package:banking_app_ui/core/widgets/header.dart';
 import 'package:banking_app_ui/core/widgets/input.dart';
 import 'package:banking_app_ui/module/auth/widgets/back-arrow-widget.dart';
 import 'package:banking_app_ui/module/home/widgets/bill-grid-view.dart';
+import 'package:banking_app_ui/module/home/widgets/institution-list.dart';
 import 'package:banking_app_ui/module/home/widgets/search-button.dart';
 import 'package:flutter/material.dart';
 
@@ -56,6 +57,39 @@ class BillScreen extends StatelessWidget {
               height: 15.0,
             ),
             BillGridView(),
+            SizedBox(
+              height: 23.0,
+            ),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(25.0, 0.0, 25.0, 25.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Text(
+                        'All institutions',
+                        style: TextStyle(
+                          color: AppTheme().secondaryText,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15.0,
+                      ),
+                      InstitutionList(),
+                      InstitutionList(),
+                      InstitutionList(),
+                      InstitutionList(),
+                      InstitutionList(),
+                      InstitutionList(),
+                      InstitutionList(),
+                    ],
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
