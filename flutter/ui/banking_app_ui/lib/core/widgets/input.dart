@@ -9,11 +9,13 @@ class Input extends StatelessWidget {
     required this.hintText,
     required this.borderRadius,
     this.suffixIcon,
+    this.prefixIcon,
   }) : super(key: key);
 
   final String hintText;
   final BorderRadius borderRadius;
   final Widget? suffixIcon;
+  final Widget? prefixIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +39,7 @@ class Input extends StatelessWidget {
             borderRadius: borderRadius,
             borderSide: BorderSide.none,
           ),
+          prefixIcon: prefixIcon,
           suffixIcon: Padding(
             padding: const EdgeInsets.all(18.0),
             child: suffixIcon,
