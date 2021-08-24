@@ -1,8 +1,9 @@
+import 'package:flutter/material.dart';
+
 import 'package:banking_app_ui/core/utils/theme/theme.dart';
 import 'package:banking_app_ui/core/widgets/button.dart';
 import 'package:banking_app_ui/core/widgets/custom-icon-button.dart';
 import 'package:banking_app_ui/core/widgets/gradient-button.dart';
-import 'package:flutter/material.dart';
 
 import 'custom-slider.dart';
 
@@ -17,6 +18,13 @@ class TopupInput extends StatelessWidget {
     '\$200',
     '\$500',
   ];
+
+  final void Function(BuildContext, int?) onTap;
+
+  const TopupInput({
+    Key? key,
+    required this.onTap,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -157,7 +165,7 @@ class TopupInput extends StatelessWidget {
                     child: GradientButton(
                       text: 'Confirm',
                       padding: EdgeInsets.zero,
-                      onPress: (context, id) {},
+                      onPress: onTap,
                     ),
                   )
                 ],
