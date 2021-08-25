@@ -1,4 +1,5 @@
 import 'package:banking_app_ui/core/utils/theme/theme.dart';
+import 'package:banking_app_ui/core/widgets/bottom-modal-sheet-container.dart';
 import 'package:banking_app_ui/module/home/models/bill.dart';
 import 'package:flutter/material.dart';
 
@@ -23,17 +24,49 @@ class BillGridView extends StatelessWidget {
               height: 88.0,
               child: Column(
                 children: [
-                  Container(
-                    margin: EdgeInsets.only(bottom: 5.0),
-                    height: 63.0,
-                    width: 63.0,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: AppTheme().tertiaryUI,
-                    ),
-                    child: Image.asset(
-                      billList[index].imageUrl,
-                    ),
+                  Stack(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(bottom: 5.0),
+                        height: 63.0,
+                        width: 63.0,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10.0),
+                          color: AppTheme().tertiaryUI,
+                        ),
+                        child: Image.asset(
+                          billList[index].imageUrl,
+                        ),
+                      ),
+                      Positioned.fill(
+                        child: Material(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              10.0,
+                            ),
+                          ),
+                          clipBehavior: Clip.hardEdge,
+                          color: Colors.transparent,
+                          child: InkWell(
+                            onTap: () {
+                              showModalBottomSheet(
+                                context: context,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(30.0),
+                                    topRight: Radius.circular(30.0),
+                                  ),
+                                ),
+                                backgroundColor: AppTheme().tertiaryBackground,
+                                builder: (BuildContext context) {
+                                  return BottomModalSheetContainer();
+                                },
+                              );
+                            },
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                   Text(
                     billList[index].type,
