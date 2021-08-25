@@ -4,6 +4,7 @@ import 'package:banking_app_ui/core/utils/theme/theme.dart';
 import 'package:banking_app_ui/core/widgets/button.dart';
 import 'package:banking_app_ui/core/widgets/custom-icon-button.dart';
 import 'package:banking_app_ui/core/widgets/gradient-button.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'custom-slider.dart';
 
@@ -166,6 +167,8 @@ class TopupInput extends StatelessWidget {
                       text: 'Confirm',
                       padding: EdgeInsets.zero,
                       onPress: onTap,
+                      icon: SvgPicture.asset(
+                          'assets/images/confirm_button_icon.svg'),
                     ),
                   )
                 ],

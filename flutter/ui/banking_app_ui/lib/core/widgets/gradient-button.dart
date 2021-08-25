@@ -37,14 +37,29 @@ class GradientButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
           ),
-          child: Text(
-            text,
-            style: TextStyle(
-              color: AppTheme().primaryText,
-              fontWeight: FontWeight.w500,
-              fontSize: 15.0,
-            ),
-          ),
+          child: icon == null
+              ? Text(
+                  text,
+                  style: TextStyle(
+                    color: AppTheme().primaryText,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 15.0,
+                  ),
+                )
+              : Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      text,
+                      style: TextStyle(
+                        color: AppTheme().primaryText,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15.0,
+                      ),
+                    ),
+                    icon!
+                  ],
+                ),
           onPressed: () => onPress(context, 0),
         ),
       ),
