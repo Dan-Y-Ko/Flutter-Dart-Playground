@@ -2,6 +2,7 @@ import 'package:banking_app_ui/core/utils/theme/theme.dart';
 import 'package:banking_app_ui/module/home/models/features.dart';
 import 'package:banking_app_ui/module/home/screens/bill.dart';
 import 'package:banking_app_ui/module/home/screens/top-up.dart';
+import 'package:banking_app_ui/module/home/screens/transfer.dart';
 import 'package:flutter/material.dart';
 
 class FeaturesList extends StatelessWidget {
@@ -12,6 +13,7 @@ class FeaturesList extends StatelessWidget {
   static const route = [
     TopUpScreen.routeName,
     BillScreen.routeName,
+    TransferScreen.routeName,
   ];
 
   @override
