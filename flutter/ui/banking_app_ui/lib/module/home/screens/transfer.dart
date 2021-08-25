@@ -1,3 +1,7 @@
+import 'package:banking_app_ui/core/utils/theme/theme.dart';
+import 'package:banking_app_ui/core/widgets/header.dart';
+import 'package:banking_app_ui/module/auth/widgets/back-arrow-widget.dart';
+import 'package:banking_app_ui/module/home/widgets/transfer-grid-view.dart';
 import 'package:flutter/material.dart';
 
 class TransferScreen extends StatelessWidget {
@@ -7,6 +11,40 @@ class TransferScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: AppTheme().primaryBackground,
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 25.0),
+              child: Header(
+                leadingIcon: BackArrowButton(),
+                appBarText: 'Transfer',
+              ),
+            ),
+            SizedBox(
+              height: 30.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 25.0),
+              child: Text(
+                'All Way',
+                style: TextStyle(
+                  color: AppTheme().secondaryText,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 15.0,
+            ),
+            TransferGridView(),
+          ],
+        ),
+      ),
+    );
   }
 }
