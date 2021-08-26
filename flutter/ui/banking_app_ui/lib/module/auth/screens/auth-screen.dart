@@ -4,20 +4,27 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../core/navigation/main-flow.dart';
 import '../../../core/utils/theme/theme.dart';
+import '../../../core/widgets/back-arrow-widget.dart';
 import '../../../core/widgets/button.dart';
 import '../../../core/widgets/gradient-button.dart';
 import '../../../core/widgets/header.dart';
 import '../../../core/widgets/input.dart';
-import '../../../core/widgets/back-arrow-widget.dart';
 import 'forgot-password.dart';
 import 'index.dart';
 
-class AuthScreen extends StatelessWidget {
+class AuthScreen extends StatefulWidget {
   const AuthScreen({
     Key? key,
   }) : super(key: key);
 
   static const routeName = '/auth';
+
+  @override
+  _AuthScreenState createState() => _AuthScreenState();
+}
+
+class _AuthScreenState extends State<AuthScreen> {
+  var obscureText = true;
 
   void navigateToAuth(context) {
     Navigator.of(context).pushNamed(AuthScreen.routeName);
@@ -96,10 +103,18 @@ class AuthScreen extends StatelessWidget {
                         )
                       : SizedBox(height: 0.0),
                   Input(
+                    obscureText: obscureText,
                     hintText: 'Password',
                     borderRadius: BorderRadius.circular(10.0),
-                    suffixIcon: SizedBox(
-                      child: SvgPicture.asset('assets/images/some_icon.svg'),
+                    suffixIcon: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          obscureText = !obscureText;
+                        });
+                      },
+                      child: SizedBox(
+                        child: SvgPicture.asset('assets/images/some_icon.svg'),
+                      ),
                     ),
                   ),
                   args.isSignupScreen

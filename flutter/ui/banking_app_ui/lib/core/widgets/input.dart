@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../utils/theme/theme.dart';
 
@@ -10,17 +9,20 @@ class Input extends StatelessWidget {
     required this.borderRadius,
     this.suffixIcon,
     this.prefixIcon,
+    this.obscureText,
   }) : super(key: key);
 
   final String hintText;
   final BorderRadius borderRadius;
   final Widget? suffixIcon;
   final Widget? prefixIcon;
+  final bool? obscureText;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: TextField(
+        obscureText: obscureText ?? false,
         decoration: InputDecoration(
           contentPadding: EdgeInsets.only(
             left: 24.0,
