@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../core/utils/theme/theme.dart';
 import '../../../core/widgets/bottom-modal-sheet-container.dart';
-import '../../home/models/bill.dart';
+import '../models/bill.dart';
 
 class BillGridView extends StatelessWidget {
   const BillGridView({Key? key}) : super(key: key);
