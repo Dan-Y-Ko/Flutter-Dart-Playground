@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/utils/theme/theme.dart';
-import '../models/contacts.dart';
+import '../../top-up/models/contacts.dart';
 
 class NotificationSection extends StatelessWidget {
   const NotificationSection({

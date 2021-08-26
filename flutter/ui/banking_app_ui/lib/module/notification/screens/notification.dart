@@ -1,9 +1,9 @@
-import '../../../core/utils/theme/theme.dart';
-import '../../../core/widgets/header.dart';
-import '../../../core/widgets/back-arrow-widget.dart';
-import '../models/contacts.dart';
-import '../widgets/notification-section.dart';
 import 'package:flutter/material.dart';
+
+import '../../../core/utils/theme/theme.dart';
+import '../../../core/widgets/back-arrow-widget.dart';
+import '../../../core/widgets/header.dart';
+import '../widgets/notification-section.dart';
 
 class NotificationScreen extends StatelessWidget {
   const NotificationScreen({Key? key}) : super(key: key);
