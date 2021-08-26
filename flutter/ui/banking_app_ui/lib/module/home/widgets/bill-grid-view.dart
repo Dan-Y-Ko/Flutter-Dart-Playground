@@ -1,6 +1,6 @@
-import 'package:banking_app_ui/core/utils/theme/theme.dart';
-import 'package:banking_app_ui/core/widgets/bottom-modal-sheet-container.dart';
-import 'package:banking_app_ui/module/home/models/bill.dart';
+import '../../../core/utils/theme/theme.dart';
+import '../../../core/widgets/bottom-modal-sheet-container.dart';
+import '../models/bill.dart';
 import 'package:flutter/material.dart';
 
 class BillGridView extends StatelessWidget {

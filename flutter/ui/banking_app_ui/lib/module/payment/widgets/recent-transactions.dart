@@ -1,5 +1,5 @@
-import 'package:banking_app_ui/core/utils/theme/theme.dart';
-import 'package:banking_app_ui/module/payment/models/transactions.dart';
+import '../../../core/utils/theme/theme.dart';
+import '../models/transactions.dart';
 import 'package:flutter/material.dart';
 
 class RecentTransactions extends StatelessWidget {

@@ -1,6 +1,6 @@
-import 'package:banking_app_ui/core/utils/theme/theme.dart';
-import 'package:banking_app_ui/core/widgets/custom-icon-button.dart';
-import 'package:banking_app_ui/module/home/screens/notification.dart';
+import '../../../core/utils/theme/theme.dart';
+import '../../../core/widgets/custom-icon-button.dart';
+import '../screens/notification.dart';
 import 'package:flutter/material.dart';
 
 class NotificationButton extends StatelessWidget {

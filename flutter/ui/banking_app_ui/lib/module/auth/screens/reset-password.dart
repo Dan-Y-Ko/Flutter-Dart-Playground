@@ -5,7 +5,7 @@ import '../../../core/utils/theme/theme.dart';
 import '../../../core/widgets/gradient-button.dart';
 import '../../../core/widgets/header.dart';
 import '../../../core/widgets/input.dart';
-import '../widgets/back-arrow-widget.dart';
+import '../../../core/widgets/back-arrow-widget.dart';
 import '../widgets/instruction-text.dart';
 import 'index.dart';
 

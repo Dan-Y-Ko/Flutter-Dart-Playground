@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../core/utils/theme/theme.dart';
-import '../../../core/widgets/custom-icon-button.dart';
+import '../utils/theme/theme.dart';
+import 'custom-icon-button.dart';
 
 class BackArrowButton extends StatelessWidget {
   const BackArrowButton({Key? key}) : super(key: key);

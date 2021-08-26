@@ -1,5 +1,5 @@
-import 'package:banking_app_ui/core/utils/theme/theme.dart';
-import 'package:banking_app_ui/module/profile/screens/profile.dart';
+import '../../../core/utils/theme/theme.dart';
+import '../screens/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

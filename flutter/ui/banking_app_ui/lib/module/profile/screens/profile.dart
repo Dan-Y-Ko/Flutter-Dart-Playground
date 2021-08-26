@@ -1,6 +1,6 @@
-import 'package:banking_app_ui/core/widgets/header.dart';
-import 'package:banking_app_ui/module/auth/widgets/back-arrow-widget.dart';
-import 'package:banking_app_ui/module/profile/models/profile-widgets.dart';
+import '../../../core/widgets/header.dart';
+import '../../../core/widgets/back-arrow-widget.dart';
+import '../models/profile-widgets.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/utils/theme/theme.dart';

@@ -1,4 +1,4 @@
-import 'package:banking_app_ui/module/home/models/contacts.dart';
+import '../../home/models/contacts.dart';
 
 class Transactions {
   final String avatarUrl;

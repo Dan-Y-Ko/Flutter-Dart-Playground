@@ -1,8 +1,8 @@
-import 'package:banking_app_ui/core/utils/theme/theme.dart';
-import 'package:banking_app_ui/module/home/models/features.dart';
-import 'package:banking_app_ui/module/home/screens/bill.dart';
-import 'package:banking_app_ui/module/home/screens/top-up.dart';
-import 'package:banking_app_ui/module/home/screens/transfer.dart';
+import '../../../core/utils/theme/theme.dart';
+import '../models/features.dart';
+import '../screens/bill.dart';
+import '../../top-up/screens/top-up.dart';
+import '../screens/transfer.dart';
 import 'package:flutter/material.dart';
 
 class FeaturesList extends StatelessWidget {

@@ -1,7 +1,7 @@
-import 'package:banking_app_ui/core/widgets/credit-card-carousel.dart';
-import 'package:banking_app_ui/module/home/widgets/bottom-section.dart';
-import 'package:banking_app_ui/module/home/widgets/features-list.dart';
-import 'package:banking_app_ui/module/home/widgets/notification-button.dart';
+import '../../../core/widgets/credit-card-carousel.dart';
+import '../widgets/bottom-section.dart';
+import '../widgets/features-list.dart';
+import '../widgets/notification-button.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/utils/theme/theme.dart';

@@ -8,7 +8,7 @@ import '../../../core/widgets/button.dart';
 import '../../../core/widgets/gradient-button.dart';
 import '../../../core/widgets/header.dart';
 import '../../../core/widgets/input.dart';
-import '../widgets/back-arrow-widget.dart';
+import '../../../core/widgets/back-arrow-widget.dart';
 import 'forgot-password.dart';
 import 'index.dart';
 

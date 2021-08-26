@@ -1,5 +1,5 @@
-import 'package:banking_app_ui/core/utils/theme/theme.dart';
-import 'package:banking_app_ui/module/home/models/incoming-transactions.dart';
+import '../../../core/utils/theme/theme.dart';
+import '../models/incoming-transactions.dart';
 import 'package:flutter/material.dart';
 
 class BottomSection extends StatelessWidget {

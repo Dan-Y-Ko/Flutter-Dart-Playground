@@ -1,11 +1,12 @@
-import 'package:banking_app_ui/core/utils/theme/theme.dart';
-import 'package:banking_app_ui/core/widgets/header.dart';
-import 'package:banking_app_ui/core/widgets/input.dart';
-import 'package:banking_app_ui/module/auth/widgets/back-arrow-widget.dart';
-import 'package:banking_app_ui/module/home/widgets/bill-grid-view.dart';
-import 'package:banking_app_ui/module/home/widgets/institution-list.dart';
-import 'package:banking_app_ui/module/home/widgets/search-button.dart';
 import 'package:flutter/material.dart';
+
+import '../../../core/utils/theme/theme.dart';
+import '../../../core/widgets/back-arrow-widget.dart';
+import '../../../core/widgets/header.dart';
+import '../../../core/widgets/input.dart';
+import '../widgets/bill-grid-view.dart';
+import '../widgets/institution-list.dart';
+import '../widgets/search-button.dart';
 
 class BillScreen extends StatelessWidget {
   const BillScreen({Key? key}) : super(key: key);

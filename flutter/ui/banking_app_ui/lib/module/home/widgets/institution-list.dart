@@ -1,4 +1,4 @@
-import 'package:banking_app_ui/core/utils/theme/theme.dart';
+import '../../../core/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 class InstitutionList extends StatelessWidget {

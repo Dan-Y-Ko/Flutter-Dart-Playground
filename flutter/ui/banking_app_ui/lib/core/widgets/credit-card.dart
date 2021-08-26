@@ -1,5 +1,5 @@
-import 'package:banking_app_ui/core/widgets/bottom-modal-sheet-container.dart';
-import 'package:banking_app_ui/core/widgets/topup-input.dart';
+import 'bottom-modal-sheet-container.dart';
+import 'topup-input.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/theme/theme.dart';

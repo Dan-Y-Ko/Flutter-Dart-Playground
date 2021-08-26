@@ -1,5 +1,5 @@
-import 'package:banking_app_ui/core/utils/theme/theme.dart';
-import 'package:banking_app_ui/module/statistic/widgets/up-arrow-button.dart';
+import '../../../core/utils/theme/theme.dart';
+import 'up-arrow-button.dart';
 import 'package:flutter/material.dart';
 
 class Overview extends StatelessWidget {

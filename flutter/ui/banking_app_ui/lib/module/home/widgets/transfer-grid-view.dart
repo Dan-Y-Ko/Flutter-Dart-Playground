@@ -1,5 +1,5 @@
-import 'package:banking_app_ui/core/utils/theme/theme.dart';
-import 'package:banking_app_ui/module/home/models/transfer.dart';
+import '../../../core/utils/theme/theme.dart';
+import '../models/transfer.dart';
 import 'package:flutter/material.dart';
 
 class TransferGridView extends StatelessWidget {

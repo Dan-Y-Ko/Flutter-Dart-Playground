@@ -1,8 +1,8 @@
-import 'package:banking_app_ui/core/utils/theme/theme.dart';
-import 'package:banking_app_ui/core/widgets/header.dart';
-import 'package:banking_app_ui/module/auth/widgets/back-arrow-widget.dart';
-import 'package:banking_app_ui/module/home/models/contacts.dart';
-import 'package:banking_app_ui/module/home/widgets/notification-section.dart';
+import '../../../core/utils/theme/theme.dart';
+import '../../../core/widgets/header.dart';
+import '../../../core/widgets/back-arrow-widget.dart';
+import '../models/contacts.dart';
+import '../widgets/notification-section.dart';
 import 'package:flutter/material.dart';
 
 class NotificationScreen extends StatelessWidget {

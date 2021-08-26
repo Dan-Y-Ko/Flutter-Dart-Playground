@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:banking_app_ui/core/utils/theme/theme.dart';
-import 'package:banking_app_ui/module/home/models/contacts.dart';
+import '../../../core/utils/theme/theme.dart';
+import '../models/contacts.dart';
 
 class NotificationSection extends StatelessWidget {
   const NotificationSection({
