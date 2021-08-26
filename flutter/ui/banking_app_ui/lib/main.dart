@@ -1,4 +1,3 @@
-import 'module/home/screens/bill.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -9,11 +8,12 @@ import 'module/auth/screens/forgot-password.dart';
 import 'module/auth/screens/index.dart';
 import 'module/auth/screens/reset-password.dart';
 import 'module/auth/screens/verification.dart';
+import 'module/bill/screens/bill.dart';
 import 'module/home/screens/home.dart';
-import 'module/home/screens/notification.dart';
-import 'module/top-up/screens/top-up.dart';
-import 'module/home/screens/transfer.dart';
+import 'module/notification/screens/notification.dart';
 import 'module/onboarding/screens/onboarding-screen.dart';
+import 'module/top-up/screens/top-up.dart';
+import 'module/transfer/screens/transfer.dart';
 
 void main() {
   runApp(MyApp());

@@ -1,11 +1,11 @@
-import '../../../core/widgets/credit-card-carousel.dart';
-import '../widgets/bottom-section.dart';
-import '../widgets/features-list.dart';
-import '../widgets/notification-button.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/utils/theme/theme.dart';
+import '../../../core/widgets/credit-card-carousel.dart';
 import '../../../core/widgets/header.dart';
+import '../widgets/bottom-section.dart';
+import '../widgets/features-list.dart';
+import '../widgets/notification-button.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);

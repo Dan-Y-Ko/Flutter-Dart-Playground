@@ -1,9 +1,10 @@
-import '../../../core/utils/theme/theme.dart';
-import '../models/features.dart';
-import '../screens/bill.dart';
-import '../../top-up/screens/top-up.dart';
-import '../screens/transfer.dart';
 import 'package:flutter/material.dart';
+
+import '../../../core/utils/theme/theme.dart';
+import '../../bill/screens/bill.dart';
+import '../../top-up/screens/top-up.dart';
+import '../../transfer/screens/transfer.dart';
+import '../models/features.dart';
 
 class FeaturesList extends StatelessWidget {
   const FeaturesList({

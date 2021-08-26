@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import '../../../core/utils/theme/theme.dart';
 import '../models/incoming-transactions.dart';
-import 'package:flutter/material.dart';
 
 class BottomSection extends StatelessWidget {
   const BottomSection({

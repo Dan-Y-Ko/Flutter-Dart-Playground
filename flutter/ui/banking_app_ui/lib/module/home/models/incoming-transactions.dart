@@ -1,4 +1,4 @@
-import 'contacts.dart';
+import '../../top-up/models/contacts.dart';
 
 class IncomingTransactions {
   final String avatarUrl;

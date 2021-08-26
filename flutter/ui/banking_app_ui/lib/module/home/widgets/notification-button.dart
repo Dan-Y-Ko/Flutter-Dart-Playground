@@ -1,7 +1,7 @@
-import '../../../core/utils/theme/theme.dart';
-import '../../../core/widgets/custom-icon-button.dart';
-import '../screens/notification.dart';
 import 'package:flutter/material.dart';
+
+import '../../../core/widgets/custom-icon-button.dart';
+import '../../notification/screens/notification.dart';
 
 class NotificationButton extends StatelessWidget {
   const NotificationButton({Key? key}) : super(key: key);
