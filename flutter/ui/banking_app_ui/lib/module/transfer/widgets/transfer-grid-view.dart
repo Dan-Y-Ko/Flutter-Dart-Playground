@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import '../../../core/utils/theme/theme.dart';
 import '../models/transfer.dart';
-import 'package:flutter/material.dart';
 
 class TransferGridView extends StatelessWidget {
   const TransferGridView({Key? key}) : super(key: key);

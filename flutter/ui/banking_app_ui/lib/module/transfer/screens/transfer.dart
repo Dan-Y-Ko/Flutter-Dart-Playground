@@ -1,8 +1,9 @@
-import '../../../core/utils/theme/theme.dart';
-import '../../../core/widgets/header.dart';
-import '../../../core/widgets/back-arrow-widget.dart';
-import '../widgets/transfer-grid-view.dart';
 import 'package:flutter/material.dart';
+
+import '../../../core/utils/theme/theme.dart';
+import '../../../core/widgets/back-arrow-widget.dart';
+import '../../../core/widgets/header.dart';
+import '../widgets/transfer-grid-view.dart';
 
 class TransferScreen extends StatelessWidget {
   const TransferScreen({Key? key}) : super(key: key);
