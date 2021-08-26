@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../utils/theme/theme.dart';
 import 'button.dart';
 import 'custom-icon-button.dart';
-import 'gradient-button.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-
 import 'custom-slider.dart';
+import 'gradient-button.dart';
 
 class TopupInput extends StatelessWidget {
   static const List<String> priceList = [
