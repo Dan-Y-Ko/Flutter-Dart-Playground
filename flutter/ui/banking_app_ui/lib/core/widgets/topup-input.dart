@@ -155,7 +155,9 @@ class TopupInput extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10.0),
                     backgroundColor: AppTheme().primaryBackground!,
                     padding: EdgeInsets.zero,
-                    onPress: (context, id) {},
+                    onPress: (context, id) {
+                      Navigator.of(context).pop();
+                    },
                     width: 107.0,
                     height: 52.0,
                   ),
