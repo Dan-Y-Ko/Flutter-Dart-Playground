@@ -1,5 +1,6 @@
-import '../../../core/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
+
+import '../../../core/utils/theme/theme.dart';
 
 class InstitutionList extends StatelessWidget {
   const InstitutionList({Key? key}) : super(key: key);

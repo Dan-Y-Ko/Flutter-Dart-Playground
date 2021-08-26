@@ -5,7 +5,7 @@ import '../../../core/widgets/back-arrow-widget.dart';
 import '../../../core/widgets/credit-card-carousel.dart';
 import '../../../core/widgets/header.dart';
 import '../../../core/widgets/people-list.dart';
-import '../../home/models/contacts.dart';
+import '../models/contacts.dart';
 import '../widgets/contacts-row.dart';
 import '../widgets/topup-input.dart';
 
